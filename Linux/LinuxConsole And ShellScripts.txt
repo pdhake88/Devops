@@ -1,0 +1,291 @@
+
+Manish@ManishPriya MINGW64 ~
+$ ssh -i ~/Downloads/devkeypair.pem ec2-user@ec2-18-222-191-208.us-east-2.compute.amazonaws.com
+The authenticity of host 'ec2-18-222-191-208.us-east-2.compute.amazonaws.com (18.222.191.208)' can't be established.
+ECDSA key fingerprint is SHA256:9cKNHBtP7vkiYH1StRuHAHFgBEhynAI+4BbhhWUSziU.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added 'ec2-18-222-191-208.us-east-2.compute.amazonaws.com,18.222.191.208' (ECDSA) to the list of known hosts.
+[ec2-user@ip-172-31-42-200 ~]$ pwd
+/home/ec2-user
+[ec2-user@ip-172-31-42-200 ~]$ cd /
+[ec2-user@ip-172-31-42-200 /]$ pwd
+/
+[ec2-user@ip-172-31-42-200 /]$ ls -la
+total 16
+dr-xr-xr-x. 18 root root  236 Jun 18  2019 .
+dr-xr-xr-x. 18 root root  236 Jun 18  2019 ..
+lrwxrwxrwx.  1 root root    7 Aug 12  2018 bin -> usr/bin
+dr-xr-xr-x.  6 root root 4096 Jan 25 23:00 boot
+drwxr-xr-x.  2 root root    6 Jun 18  2019 data
+drwxr-xr-x. 18 root root 2720 Jan 25 23:00 dev
+drwxr-xr-x. 80 root root 8192 Jan 25 23:00 etc
+drwxr-xr-x.  3 root root   22 Jan 25 23:00 home
+lrwxrwxrwx.  1 root root    7 Aug 12  2018 lib -> usr/lib
+lrwxrwxrwx.  1 root root    9 Aug 12  2018 lib64 -> usr/lib64
+drwxr-xr-x.  2 root root    6 Aug 12  2018 media
+drwxr-xr-x.  2 root root    6 Aug 12  2018 mnt
+drwxr-xr-x.  2 root root    6 Aug 12  2018 opt
+dr-xr-xr-x. 96 root root    0 Jan 25 23:00 proc
+dr-xr-x---.  3 root root  149 Jan 25 23:00 root
+drwxr-xr-x. 23 root root  660 Jan 25 23:00 run
+lrwxrwxrwx.  1 root root    8 Aug 12  2018 sbin -> usr/sbin
+drwxr-xr-x.  2 root root    6 Aug 12  2018 srv
+dr-xr-xr-x. 13 root root    0 Jan 25 23:00 sys
+drwxrwxrwt.  8 root root  172 Jan 25 23:10 tmp
+drwxr-xr-x. 12 root root  144 Jun 18  2019 usr
+drwxr-xr-x. 20 root root  278 Jan 25 23:00 var
+[ec2-user@ip-172-31-42-200 /]$ cd tmp
+[ec2-user@ip-172-31-42-200 tmp]$ pl -la
+-bash: pl: command not found
+[ec2-user@ip-172-31-42-200 tmp]$ ls -la
+total 0
+drwxrwxrwt.  8 root root 172 Jan 25 23:10 .
+dr-xr-xr-x. 18 root root 236 Jun 18  2019 ..
+drwxrwxrwt.  2 root root   6 Jan 25 23:00 .font-unix
+drwxrwxrwt.  2 root root   6 Jan 25 23:00 .ICE-unix
+drwx------.  3 root root  17 Jan 25 23:00 systemd-private-bef7c1c6269a4a4ea66381a4d042cdcc-chronyd.service-Mljz1Z
+drwxrwxrwt.  2 root root   6 Jan 25 23:00 .Test-unix
+drwxrwxrwt.  2 root root   6 Jan 25 23:00 .X11-unix
+drwxrwxrwt.  2 root root   6 Jan 25 23:00 .XIM-unix
+[ec2-user@ip-172-31-42-200 tmp]$ cd .font-unix/
+[ec2-user@ip-172-31-42-200 .font-unix]$ ls -la
+total 0
+drwxrwxrwt. 2 root root   6 Jan 25 23:00 .
+drwxrwxrwt. 8 root root 172 Jan 25 23:10 ..
+[ec2-user@ip-172-31-42-200 .font-unix]$ cd ../../../
+[ec2-user@ip-172-31-42-200 /]$ pwd
+/
+[ec2-user@ip-172-31-42-200 /]$ cd home/ec2-user
+[ec2-user@ip-172-31-42-200 ~]$ pwd
+/home/ec2-user
+[ec2-user@ip-172-31-42-200 ~]$ whpami
+-bash: whpami: command not found
+[ec2-user@ip-172-31-42-200 ~]$ whoami
+ec2-user
+[ec2-user@ip-172-31-42-200 ~]$ touch DisplayFileName.sh
+[ec2-user@ip-172-31-42-200 ~]$ vim DisplayFileName.sh
+-bash: vim: command not found
+[ec2-user@ip-172-31-42-200 ~]$ sudo install vim
+install: missing destination file operand after 'vim'
+Try 'install --help' for more information.
+[ec2-user@ip-172-31-42-200 ~]$ sudo yum install vim
+Last metadata expiration check: 0:16:10 ago on Sat 25 Jan 2020 11:10:44 PM UTC.
+Dependencies resolved.
+================================================================================================================================================================================================
+ Package                                    Arch                               Version                                        Repository                                                   Size
+================================================================================================================================================================================================
+Installing:
+ vim-enhanced                               x86_64                             2:8.0.1763-13.el8                              rhui-rhel-8-appstream-rhui-rpms                             1.4 M
+Installing dependencies:
+ vim-common                                 x86_64                             2:8.0.1763-13.el8                              rhui-rhel-8-appstream-rhui-rpms                             6.3 M
+ vim-filesystem                             noarch                             2:8.0.1763-13.el8                              rhui-rhel-8-appstream-rhui-rpms                              48 k
+ gpm-libs                                   x86_64                             1.20.7-15.el8                                  rhui-rhel-8-appstream-rhui-rpms                              39 k
+
+Transaction Summary
+================================================================================================================================================================================================
+Install  4 Packages
+
+Total download size: 7.8 M
+Installed size: 30 M
+Is this ok [y/N]: y
+Downloading Packages:
+(1/4): vim-filesystem-8.0.1763-13.el8.noarch.rpm                                                                                                                435 kB/s |  48 kB     00:00
+(2/4): vim-enhanced-8.0.1763-13.el8.x86_64.rpm                                                                                                                  8.5 MB/s | 1.4 MB     00:00
+(3/4): gpm-libs-1.20.7-15.el8.x86_64.rpm                                                                                                                        382 kB/s |  39 kB     00:00
+(4/4): vim-common-8.0.1763-13.el8.x86_64.rpm                                                                                                                     22 MB/s | 6.3 MB     00:00
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Total                                                                                                                                                           6.0 MB/s | 7.8 MB     00:01
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Preparing        :                                                                                                                                                                        1/1
+  Installing       : gpm-libs-1.20.7-15.el8.x86_64                                                                                                                                          1/4
+  Running scriptlet: gpm-libs-1.20.7-15.el8.x86_64                                                                                                                                          1/4
+  Installing       : vim-filesystem-2:8.0.1763-13.el8.noarch                                                                                                                                2/4
+  Installing       : vim-common-2:8.0.1763-13.el8.x86_64                                                                                                                                    3/4
+  Installing       : vim-enhanced-2:8.0.1763-13.el8.x86_64                                                                                                                                  4/4
+  Running scriptlet: vim-enhanced-2:8.0.1763-13.el8.x86_64                                                                                                                                  4/4
+  Running scriptlet: vim-common-2:8.0.1763-13.el8.x86_64                                                                                                                                    4/4
+  Verifying        : vim-common-2:8.0.1763-13.el8.x86_64                                                                                                                                    1/4
+  Verifying        : vim-enhanced-2:8.0.1763-13.el8.x86_64                                                                                                                                  2/4
+  Verifying        : vim-filesystem-2:8.0.1763-13.el8.noarch                                                                                                                                3/4
+  Verifying        : gpm-libs-1.20.7-15.el8.x86_64                                                                                                                                          4/4
+
+Installed:
+  vim-enhanced-2:8.0.1763-13.el8.x86_64            vim-common-2:8.0.1763-13.el8.x86_64            vim-filesystem-2:8.0.1763-13.el8.noarch            gpm-libs-1.20.7-15.el8.x86_64
+
+Complete!
+[ec2-user@ip-172-31-42-200 ~]$ vim DisplayFileName.sh
+[ec2-user@ip-172-31-42-200 ~]$ ./DisplayFileName.sh
+-bash: ./DisplayFileName.sh: Permission denied
+[ec2-user@ip-172-31-42-200 ~]$ ls -l
+total 4
+-rw-rw-r--. 1 ec2-user ec2-user 55 Jan 25 23:28 DisplayFileName.sh
+[ec2-user@ip-172-31-42-200 ~]$ chmod u+x DisplayFileName.sh
+[ec2-user@ip-172-31-42-200 ~]$ ./DisplayFileName.sh
+Your Shell script file name is ./DisplayFileName.sh
+[ec2-user@ip-172-31-42-200 ~]$ vim DisplayFileName.sh
+[ec2-user@ip-172-31-42-200 ~]$ ./DisplayFileName.sh
+Your Shell script file name is DisplayFileName.sh
+[ec2-user@ip-172-31-42-200 ~]$ vim DisplayFileName.sh
+[ec2-user@ip-172-31-42-200 ~]$ touch DisplayNumber.sh DisplayBuzzwordforNumber.sh
+[ec2-user@ip-172-31-42-200 ~]$ vim DisplayNumber.sh
+[ec2-user@ip-172-31-42-200 ~]$ chmod u+x DisplayNumber.sh
+[ec2-user@ip-172-31-42-200 ~]$ ./DisplayNumber.sh
+{1..}
+[ec2-user@ip-172-31-42-200 ~]$ ./DisplayNumber.sh 10
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+[ec2-user@ip-172-31-42-200 ~]$ vim DisplayBuzzwordforNumber.sh
+[ec2-user@ip-172-31-42-200 ~]$ chmod u+x DisplayBuzzwordforNumber.sh
+[ec2-user@ip-172-31-42-200 ~]$ ./DisplayBuzzwordforNumber.sh
+1
+2
+dev
+4
+ops
+dev
+7
+8
+dev
+ops
+11
+dev
+13
+14
+devops
+16
+17
+dev
+19
+ops
+dev
+22
+23
+dev
+ops
+26
+dev
+28
+29
+devops
+[ec2-user@ip-172-31-42-200 ~]$ vim DisplayBuzzwordforNumber.sh
+[ec2-user@ip-172-31-42-200 ~]$ pwd
+/home/ec2-user
+[ec2-user@ip-172-31-42-200 ~]$ ls -l
+total 12
+-rwxrw-r--. 1 ec2-user ec2-user 230 Jan 25 23:43 DisplayBuzzwordforNumber.sh
+-rwxrw-r--. 1 ec2-user ec2-user  67 Jan 25 23:33 DisplayFileName.sh
+-rwxrw-r--. 1 ec2-user ec2-user 170 Jan 25 23:39 DisplayNumber.sh
+[ec2-user@ip-172-31-42-200 ~]$ mkdir ShellScripts Github Jenkins
+[ec2-user@ip-172-31-42-200 ~]$ ls -l
+total 12
+-rwxrw-r--. 1 ec2-user ec2-user 230 Jan 25 23:43 DisplayBuzzwordforNumber.sh
+-rwxrw-r--. 1 ec2-user ec2-user  67 Jan 25 23:33 DisplayFileName.sh
+-rwxrw-r--. 1 ec2-user ec2-user 170 Jan 25 23:39 DisplayNumber.sh
+drwxrwxr-x. 2 ec2-user ec2-user   6 Jan 25 23:44 Github
+drwxrwxr-x. 2 ec2-user ec2-user   6 Jan 25 23:44 Jenkins
+drwxrwxr-x. 2 ec2-user ec2-user   6 Jan 25 23:44 ShellScripts
+[ec2-user@ip-172-31-42-200 ~]$ mv DisplayBuzzwordforNumber.sh ShellScripts/
+[ec2-user@ip-172-31-42-200 ~]$ mv DisplayFileName.sh ShellScripts/
+[ec2-user@ip-172-31-42-200 ~]$ mv DisplayNumber.sh ShellScripts/
+[ec2-user@ip-172-31-42-200 ~]$ cd ShellScripts/
+[ec2-user@ip-172-31-42-200 ShellScripts]$ ls -l
+total 12
+-rwxrw-r--. 1 ec2-user ec2-user 230 Jan 25 23:43 DisplayBuzzwordforNumber.sh
+-rwxrw-r--. 1 ec2-user ec2-user  67 Jan 25 23:33 DisplayFileName.sh
+-rwxrw-r--. 1 ec2-user ec2-user 170 Jan 25 23:39 DisplayNumber.sh
+[ec2-user@ip-172-31-42-200 ShellScripts]$
+[ec2-user@ip-172-31-42-200 ShellScripts]$ cd
+[ec2-user@ip-172-31-42-200 ~]$ pwd
+/home/ec2-user
+[ec2-user@ip-172-31-42-200 ~]$ ls -l
+total 0
+drwxrwxr-x. 2 ec2-user ec2-user  6 Jan 25 23:44 Github
+drwxrwxr-x. 2 ec2-user ec2-user  6 Jan 25 23:44 Jenkins
+drwxrwxr-x. 2 ec2-user ec2-user 91 Jan 25 23:45 ShellScripts
+[ec2-user@ip-172-31-42-200 ~]$ df
+Filesystem     1K-blocks    Used Available Use% Mounted on
+devtmpfs          399912       0    399912   0% /dev
+tmpfs             419804       0    419804   0% /dev/shm
+tmpfs             419804   10856    408948   3% /run
+tmpfs             419804       0    419804   0% /sys/fs/cgroup
+/dev/xvda2      10473452 1155752   9317700  12% /
+tmpfs              83960       0     83960   0% /run/user/1000
+[ec2-user@ip-172-31-42-200 ~]$ df -h
+Filesystem      Size  Used Avail Use% Mounted on
+devtmpfs        391M     0  391M   0% /dev
+tmpfs           410M     0  410M   0% /dev/shm
+tmpfs           410M   11M  400M   3% /run
+tmpfs           410M     0  410M   0% /sys/fs/cgroup
+/dev/xvda2       10G  1.2G  8.9G  12% /
+tmpfs            82M     0   82M   0% /run/user/1000
+[ec2-user@ip-172-31-42-200 ~]$ du
+4       ./.ssh
+12      ./ShellScripts
+0       ./Github
+0       ./Jenkins
+36      .
+[ec2-user@ip-172-31-42-200 ~]$ du -h
+4.0K    ./.ssh
+12K     ./ShellScripts
+0       ./Github
+0       ./Jenkins
+36K     .
+[ec2-user@ip-172-31-42-200 ~]$ grep "echo" /home/ec2-user/
+grep: /home/ec2-user/: Is a directory
+[ec2-user@ip-172-31-42-200 ~]$ grep * "echo" /home/ec2-user/
+grep: Jenkins: Is a directory
+grep: ShellScripts: Is a directory
+grep: echo: No such file or directory
+grep: /home/ec2-user/: Is a directory
+[ec2-user@ip-172-31-42-200 ~]$ grep "echo" /home/ec2-user/ShellScripts/
+grep: /home/ec2-user/ShellScripts/: Is a directory
+[ec2-user@ip-172-31-42-200 ~]$ grep "echo" /home/ec2-user/ShellScripts/DisplayNumber.sh
+for i in $(eval echo {1..$1});
+        echo $i;
+#        echo "$i"
+ #   echo $i
+[ec2-user@ip-172-31-42-200 ~]$ diff /home/ec2-user/DisplayNumber.sh /home/ec2-user/DisplayBuzzwordNumber.sh
+diff: /home/ec2-user/DisplayNumber.sh: No such file or directory
+diff: /home/ec2-user/DisplayBuzzwordNumber.sh: No such file or directory
+[ec2-user@ip-172-31-42-200 ~]$ diff /home/ec2-user/ShellScripts/DisplayNumber.sh /home/ec2-user/ShellScripts/DisplayBuzzwordforNumber.sh
+3,5c3,13
+< for i in $(eval echo {1..$1});
+<  do
+<         echo $i;
+---
+> for i in {1..30}
+> do
+>       if [[ "$i%3" -eq 0 ]] && [[ "$i%5" -eq 0 ]]; then
+>               echo "devops"
+>       elif [[ "$i%3" -eq 0 ]] ; then
+>               echo "dev"
+>       elif [[ "$i%5" -eq 0 ]] ; then
+>                 echo "ops"
+>       else
+>               echo $i
+>       fi
+8,15d15
+< #for i in $(seq 1 $1);
+< #do
+< #        echo "$i"
+< #done
+<
+< #for ((i=1;i<=$1;i++)); do
+<  #   echo $i
+< #done
+[ec2-user@ip-172-31-42-200 ~]$ client_loop: send disconnect: Connection reset by peer
+
+Manish@ManishPriya MINGW64 ~
+$
