@@ -1,0 +1,295 @@
+[ec2-user@ip-172-31-29-147 target]$ sudo yum install tomcat
+Loaded plugins: extras_suggestions, langpacks, priorities, update-motd
+amzn2-core                                                                                                                                                               | 2.4 kB  00:00:00
+Resolving Dependencies
+--> Running transaction check
+---> Package tomcat.noarch 0:7.0.76-9.amzn2 will be installed
+--> Processing Dependency: tomcat-lib = 7.0.76-9.amzn2 for package: tomcat-7.0.76-9.amzn2.noarch
+--> Processing Dependency: apache-commons-pool for package: tomcat-7.0.76-9.amzn2.noarch
+--> Processing Dependency: apache-commons-logging for package: tomcat-7.0.76-9.amzn2.noarch
+--> Processing Dependency: apache-commons-dbcp for package: tomcat-7.0.76-9.amzn2.noarch
+--> Processing Dependency: apache-commons-daemon for package: tomcat-7.0.76-9.amzn2.noarch
+--> Processing Dependency: apache-commons-collections for package: tomcat-7.0.76-9.amzn2.noarch
+--> Running transaction check
+---> Package apache-commons-collections.noarch 0:3.2.1-22.amzn2 will be installed
+---> Package apache-commons-daemon.x86_64 0:1.0.13-7.amzn2 will be installed
+---> Package apache-commons-dbcp.noarch 0:1.4-17.amzn2 will be installed
+--> Processing Dependency: mvn(org.apache.geronimo.specs:geronimo-jta_1.1_spec) for package: apache-commons-dbcp-1.4-17.amzn2.noarch
+---> Package apache-commons-logging.noarch 0:1.1.2-7.amzn2 will be installed
+--> Processing Dependency: mvn(logkit:logkit) for package: apache-commons-logging-1.1.2-7.amzn2.noarch
+--> Processing Dependency: mvn(log4j:log4j) for package: apache-commons-logging-1.1.2-7.amzn2.noarch
+--> Processing Dependency: mvn(avalon-framework:avalon-framework-api) for package: apache-commons-logging-1.1.2-7.amzn2.noarch
+---> Package apache-commons-pool.noarch 0:1.6-9.amzn2 will be installed
+---> Package tomcat-lib.noarch 0:7.0.76-9.amzn2 will be installed
+--> Processing Dependency: tomcat-servlet-3.0-api = 7.0.76-9.amzn2 for package: tomcat-lib-7.0.76-9.amzn2.noarch
+--> Processing Dependency: tomcat-jsp-2.2-api = 7.0.76-9.amzn2 for package: tomcat-lib-7.0.76-9.amzn2.noarch
+--> Processing Dependency: tomcat-el-2.2-api = 7.0.76-9.amzn2 for package: tomcat-lib-7.0.76-9.amzn2.noarch
+--> Processing Dependency: ecj >= 1:4.2.1 for package: tomcat-lib-7.0.76-9.amzn2.noarch
+--> Running transaction check
+---> Package avalon-framework.noarch 0:4.3-10.1.amzn2 will be installed
+--> Processing Dependency: xalan-j2 for package: avalon-framework-4.3-10.1.amzn2.noarch
+---> Package avalon-logkit.noarch 0:2.1-14.1.amzn2 will be installed
+--> Processing Dependency: jms for package: avalon-logkit-2.1-14.1.amzn2.noarch
+---> Package ecj.x86_64 1:4.5.2-3.amzn2.0.2 will be installed
+---> Package geronimo-jta.noarch 0:1.1.1-17.amzn2 will be installed
+---> Package log4j.noarch 0:1.2.17-16.amzn2 will be installed
+--> Processing Dependency: mvn(javax.mail:mail) for package: log4j-1.2.17-16.amzn2.noarch
+---> Package tomcat-el-2.2-api.noarch 0:7.0.76-9.amzn2 will be installed
+---> Package tomcat-jsp-2.2-api.noarch 0:7.0.76-9.amzn2 will be installed
+---> Package tomcat-servlet-3.0-api.noarch 0:7.0.76-9.amzn2 will be installed
+--> Running transaction check
+---> Package geronimo-jms.noarch 0:1.1.1-19.amzn2 will be installed
+---> Package javamail.noarch 0:1.4.6-8.amzn2 will be installed
+---> Package xalan-j2.noarch 0:2.7.1-23.1.amzn2 will be installed
+--> Processing Dependency: xerces-j2 for package: xalan-j2-2.7.1-23.1.amzn2.noarch
+--> Processing Dependency: osgi(org.apache.xerces) for package: xalan-j2-2.7.1-23.1.amzn2.noarch
+--> Running transaction check
+---> Package xerces-j2.noarch 0:2.11.0-17.amzn2 will be installed
+--> Processing Dependency: xml-commons-resolver >= 1.2 for package: xerces-j2-2.11.0-17.amzn2.noarch
+--> Processing Dependency: xml-commons-apis >= 1.4.01 for package: xerces-j2-2.11.0-17.amzn2.noarch
+--> Processing Dependency: osgi(org.apache.xml.resolver) for package: xerces-j2-2.11.0-17.amzn2.noarch
+--> Processing Dependency: osgi(javax.xml) for package: xerces-j2-2.11.0-17.amzn2.noarch
+--> Running transaction check
+---> Package xml-commons-apis.noarch 0:1.4.01-16.amzn2 will be installed
+---> Package xml-commons-resolver.noarch 0:1.2-15.amzn2 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+================================================================================================================================================================================================
+ Package                                                  Arch                                 Version                                           Repository                                Size
+================================================================================================================================================================================================
+Installing:
+ tomcat                                                   noarch                               7.0.76-9.amzn2                                    amzn2-core                                91 k
+Installing for dependencies:
+ apache-commons-collections                               noarch                               3.2.1-22.amzn2                                    amzn2-core                               509 k
+ apache-commons-daemon                                    x86_64                               1.0.13-7.amzn2                                    amzn2-core                                54 k
+ apache-commons-dbcp                                      noarch                               1.4-17.amzn2                                      amzn2-core                               167 k
+ apache-commons-logging                                   noarch                               1.1.2-7.amzn2                                     amzn2-core                                78 k
+ apache-commons-pool                                      noarch                               1.6-9.amzn2                                       amzn2-core                               113 k
+ avalon-framework                                         noarch                               4.3-10.1.amzn2                                    amzn2-core                                87 k
+ avalon-logkit                                            noarch                               2.1-14.1.amzn2                                    amzn2-core                                87 k
+ ecj                                                      x86_64                               1:4.5.2-3.amzn2.0.2                               amzn2-core                               1.9 M
+ geronimo-jms                                             noarch                               1.1.1-19.amzn2                                    amzn2-core                                31 k
+ geronimo-jta                                             noarch                               1.1.1-17.amzn2                                    amzn2-core                                21 k
+ javamail                                                 noarch                               1.4.6-8.amzn2                                     amzn2-core                               757 k
+ log4j                                                    noarch                               1.2.17-16.amzn2                                   amzn2-core                               444 k
+ tomcat-el-2.2-api                                        noarch                               7.0.76-9.amzn2                                    amzn2-core                                81 k
+ tomcat-jsp-2.2-api                                       noarch                               7.0.76-9.amzn2                                    amzn2-core                                94 k
+ tomcat-lib                                               noarch                               7.0.76-9.amzn2                                    amzn2-core                               3.9 M
+ tomcat-servlet-3.0-api                                   noarch                               7.0.76-9.amzn2                                    amzn2-core                               212 k
+ xalan-j2                                                 noarch                               2.7.1-23.1.amzn2                                  amzn2-core                               1.9 M
+ xerces-j2                                                noarch                               2.11.0-17.amzn2                                   amzn2-core                               1.1 M
+ xml-commons-apis                                         noarch                               1.4.01-16.amzn2                                   amzn2-core                               227 k
+ xml-commons-resolver                                     noarch                               1.2-15.amzn2                                      amzn2-core                               108 k
+
+Transaction Summary
+================================================================================================================================================================================================
+Install  1 Package (+20 Dependent packages)
+
+Total download size: 12 M
+Installed size: 15 M
+Is this ok [y/d/N]: y
+Downloading packages:
+(1/21): apache-commons-daemon-1.0.13-7.amzn2.x86_64.rpm                                                                                                                  |  54 kB  00:00:00
+(2/21): apache-commons-collections-3.2.1-22.amzn2.noarch.rpm                                                                                                             | 509 kB  00:00:00
+(3/21): apache-commons-dbcp-1.4-17.amzn2.noarch.rpm                                                                                                                      | 167 kB  00:00:00
+(4/21): apache-commons-logging-1.1.2-7.amzn2.noarch.rpm                                                                                                                  |  78 kB  00:00:00
+(5/21): apache-commons-pool-1.6-9.amzn2.noarch.rpm                                                                                                                       | 113 kB  00:00:00
+(6/21): avalon-framework-4.3-10.1.amzn2.noarch.rpm                                                                                                                       |  87 kB  00:00:00
+(7/21): avalon-logkit-2.1-14.1.amzn2.noarch.rpm                                                                                                                          |  87 kB  00:00:00
+(8/21): ecj-4.5.2-3.amzn2.0.2.x86_64.rpm                                                                                                                                 | 1.9 MB  00:00:00
+(9/21): geronimo-jms-1.1.1-19.amzn2.noarch.rpm                                                                                                                           |  31 kB  00:00:00
+(10/21): geronimo-jta-1.1.1-17.amzn2.noarch.rpm                                                                                                                          |  21 kB  00:00:00
+(11/21): javamail-1.4.6-8.amzn2.noarch.rpm                                                                                                                               | 757 kB  00:00:00
+(12/21): log4j-1.2.17-16.amzn2.noarch.rpm                                                                                                                                | 444 kB  00:00:00
+(13/21): tomcat-7.0.76-9.amzn2.noarch.rpm                                                                                                                                |  91 kB  00:00:00
+(14/21): tomcat-el-2.2-api-7.0.76-9.amzn2.noarch.rpm                                                                                                                     |  81 kB  00:00:00
+(15/21): tomcat-jsp-2.2-api-7.0.76-9.amzn2.noarch.rpm                                                                                                                    |  94 kB  00:00:00
+(16/21): tomcat-servlet-3.0-api-7.0.76-9.amzn2.noarch.rpm                                                                                                                | 212 kB  00:00:00
+(17/21): tomcat-lib-7.0.76-9.amzn2.noarch.rpm                                                                                                                            | 3.9 MB  00:00:00
+(18/21): xerces-j2-2.11.0-17.amzn2.noarch.rpm                                                                                                                            | 1.1 MB  00:00:00
+(19/21): xalan-j2-2.7.1-23.1.amzn2.noarch.rpm                                                                                                                            | 1.9 MB  00:00:00
+(20/21): xml-commons-apis-1.4.01-16.amzn2.noarch.rpm                                                                                                                     | 227 kB  00:00:00
+(21/21): xml-commons-resolver-1.2-15.amzn2.noarch.rpm                                                                                                                    | 108 kB  00:00:00
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Total                                                                                                                                                            17 MB/s |  12 MB  00:00:00
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : apache-commons-pool-1.6-9.amzn2.noarch                                                                                                                                      1/21
+  Installing : tomcat-servlet-3.0-api-7.0.76-9.amzn2.noarch                                                                                                                                2/21
+  Installing : xml-commons-apis-1.4.01-16.amzn2.noarch                                                                                                                                     3/21
+  Installing : geronimo-jms-1.1.1-19.amzn2.noarch                                                                                                                                          4/21
+  Installing : apache-commons-collections-3.2.1-22.amzn2.noarch                                                                                                                            5/21
+  Installing : xml-commons-resolver-1.2-15.amzn2.noarch                                                                                                                                    6/21
+  Installing : xalan-j2-2.7.1-23.1.amzn2.noarch                                                                                                                                            7/21
+  Installing : xerces-j2-2.11.0-17.amzn2.noarch                                                                                                                                            8/21
+  Installing : tomcat-jsp-2.2-api-7.0.76-9.amzn2.noarch                                                                                                                                    9/21
+  Installing : tomcat-el-2.2-api-7.0.76-9.amzn2.noarch                                                                                                                                    10/21
+  Installing : geronimo-jta-1.1.1-17.amzn2.noarch                                                                                                                                         11/21
+  Installing : apache-commons-dbcp-1.4-17.amzn2.noarch                                                                                                                                    12/21
+  Installing : javamail-1.4.6-8.amzn2.noarch                                                                                                                                              13/21
+  Installing : log4j-1.2.17-16.amzn2.noarch                                                                                                                                               14/21
+  Installing : apache-commons-logging-1.1.2-7.amzn2.noarch                                                                                                                                15/21
+  Installing : avalon-logkit-2.1-14.1.amzn2.noarch                                                                                                                                        16/21
+  Installing : avalon-framework-4.3-10.1.amzn2.noarch                                                                                                                                     17/21
+  Installing : apache-commons-daemon-1.0.13-7.amzn2.x86_64                                                                                                                                18/21
+  Installing : 1:ecj-4.5.2-3.amzn2.0.2.x86_64                                                                                                                                             19/21
+  Installing : tomcat-lib-7.0.76-9.amzn2.noarch                                                                                                                                           20/21
+  Installing : tomcat-7.0.76-9.amzn2.noarch                                                                                                                                               21/21
+  Verifying  : xerces-j2-2.11.0-17.amzn2.noarch                                                                                                                                            1/21
+  Verifying  : apache-commons-collections-3.2.1-22.amzn2.noarch                                                                                                                            2/21
+  Verifying  : apache-commons-logging-1.1.2-7.amzn2.noarch                                                                                                                                 3/21
+  Verifying  : tomcat-servlet-3.0-api-7.0.76-9.amzn2.noarch                                                                                                                                4/21
+  Verifying  : geronimo-jms-1.1.1-19.amzn2.noarch                                                                                                                                          5/21
+  Verifying  : tomcat-jsp-2.2-api-7.0.76-9.amzn2.noarch                                                                                                                                    6/21
+  Verifying  : xml-commons-resolver-1.2-15.amzn2.noarch                                                                                                                                    7/21
+  Verifying  : 1:ecj-4.5.2-3.amzn2.0.2.x86_64                                                                                                                                              8/21
+  Verifying  : tomcat-7.0.76-9.amzn2.noarch                                                                                                                                                9/21
+  Verifying  : tomcat-lib-7.0.76-9.amzn2.noarch                                                                                                                                           10/21
+  Verifying  : apache-commons-pool-1.6-9.amzn2.noarch                                                                                                                                     11/21
+  Verifying  : apache-commons-dbcp-1.4-17.amzn2.noarch                                                                                                                                    12/21
+  Verifying  : apache-commons-daemon-1.0.13-7.amzn2.x86_64                                                                                                                                13/21
+  Verifying  : xml-commons-apis-1.4.01-16.amzn2.noarch                                                                                                                                    14/21
+  Verifying  : javamail-1.4.6-8.amzn2.noarch                                                                                                                                              15/21
+  Verifying  : geronimo-jta-1.1.1-17.amzn2.noarch                                                                                                                                         16/21
+  Verifying  : xalan-j2-2.7.1-23.1.amzn2.noarch                                                                                                                                           17/21
+  Verifying  : avalon-logkit-2.1-14.1.amzn2.noarch                                                                                                                                        18/21
+  Verifying  : log4j-1.2.17-16.amzn2.noarch                                                                                                                                               19/21
+  Verifying  : tomcat-el-2.2-api-7.0.76-9.amzn2.noarch                                                                                                                                    20/21
+  Verifying  : avalon-framework-4.3-10.1.amzn2.noarch                                                                                                                                     21/21
+
+Installed:
+  tomcat.noarch 0:7.0.76-9.amzn2
+
+Dependency Installed:
+  apache-commons-collections.noarch 0:3.2.1-22.amzn2  apache-commons-daemon.x86_64 0:1.0.13-7.amzn2  apache-commons-dbcp.noarch 0:1.4-17.amzn2  apache-commons-logging.noarch 0:1.1.2-7.amzn2
+  apache-commons-pool.noarch 0:1.6-9.amzn2            avalon-framework.noarch 0:4.3-10.1.amzn2       avalon-logkit.noarch 0:2.1-14.1.amzn2      ecj.x86_64 1:4.5.2-3.amzn2.0.2
+  geronimo-jms.noarch 0:1.1.1-19.amzn2                geronimo-jta.noarch 0:1.1.1-17.amzn2           javamail.noarch 0:1.4.6-8.amzn2            log4j.noarch 0:1.2.17-16.amzn2
+  tomcat-el-2.2-api.noarch 0:7.0.76-9.amzn2           tomcat-jsp-2.2-api.noarch 0:7.0.76-9.amzn2     tomcat-lib.noarch 0:7.0.76-9.amzn2         tomcat-servlet-3.0-api.noarch 0:7.0.76-9.amzn2
+  xalan-j2.noarch 0:2.7.1-23.1.amzn2                  xerces-j2.noarch 0:2.11.0-17.amzn2             xml-commons-apis.noarch 0:1.4.01-16.amzn2  xml-commons-resolver.noarch 0:1.2-15.amzn2
+
+Complete!
+[ec2-user@ip-172-31-29-147 target]$ sudo vi /usr/share/tomcat/conf/tomcat.conf
+[ec2-user@ip-172-31-29-147 target]$
+[ec2-user@ip-172-31-29-147 target]$ JAVA_OPTS="-Djava.security.egd=file:/dev/./urandom -Djava.awt.headless=true -Xmx1026m -
+> XX:MaxPermSize=256m -XX:+UseConcMarkSweepGC"
+[ec2-user@ip-172-31-29-147 target]$ sudo yum install tomcat-webapps tomcat-admin-webapps
+Loaded plugins: extras_suggestions, langpacks, priorities, update-motd
+Resolving Dependencies
+--> Running transaction check
+---> Package tomcat-admin-webapps.noarch 0:7.0.76-9.amzn2 will be installed
+---> Package tomcat-webapps.noarch 0:7.0.76-9.amzn2 will be installed
+--> Processing Dependency: jakarta-taglibs-standard >= 1.1 for package: tomcat-webapps-7.0.76-9.amzn2.noarch
+--> Running transaction check
+---> Package jakarta-taglibs-standard.noarch 0:1.1.2-14.1.amzn2 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+================================================================================================================================================================================================
+ Package                                                 Arch                                  Version                                          Repository                                 Size
+================================================================================================================================================================================================
+Installing:
+ tomcat-admin-webapps                                    noarch                                7.0.76-9.amzn2                                   amzn2-core                                 39 k
+ tomcat-webapps                                          noarch                                7.0.76-9.amzn2                                   amzn2-core                                340 k
+Installing for dependencies:
+ jakarta-taglibs-standard                                noarch                                1.1.2-14.1.amzn2                                 amzn2-core                                303 k
+
+Transaction Summary
+================================================================================================================================================================================================
+Install  2 Packages (+1 Dependent package)
+
+Total download size: 683 k
+Installed size: 1.6 M
+Is this ok [y/d/N]: y
+Downloading packages:
+(1/3): tomcat-admin-webapps-7.0.76-9.amzn2.noarch.rpm                                                                                                                    |  39 kB  00:00:00
+(2/3): jakarta-taglibs-standard-1.1.2-14.1.amzn2.noarch.rpm                                                                                                              | 303 kB  00:00:00
+(3/3): tomcat-webapps-7.0.76-9.amzn2.noarch.rpm                                                                                                                          | 340 kB  00:00:00
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Total                                                                                                                                                           3.4 MB/s | 683 kB  00:00:00
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : jakarta-taglibs-standard-1.1.2-14.1.amzn2.noarch                                                                                                                             1/3
+  Installing : tomcat-webapps-7.0.76-9.amzn2.noarch                                                                                                                                         2/3
+  Installing : tomcat-admin-webapps-7.0.76-9.amzn2.noarch                                                                                                                                   3/3
+  Verifying  : tomcat-admin-webapps-7.0.76-9.amzn2.noarch                                                                                                                                   1/3
+  Verifying  : jakarta-taglibs-standard-1.1.2-14.1.amzn2.noarch                                                                                                                             2/3
+  Verifying  : tomcat-webapps-7.0.76-9.amzn2.noarch                                                                                                                                         3/3
+
+Installed:
+  tomcat-admin-webapps.noarch 0:7.0.76-9.amzn2                                                      tomcat-webapps.noarch 0:7.0.76-9.amzn2
+
+Dependency Installed:
+  jakarta-taglibs-standard.noarch 0:1.1.2-14.1.amzn2
+
+Complete!
+[ec2-user@ip-172-31-29-147 target]$ sudo yum install tomcat-docs-webapp tomcat-javadoc
+Loaded plugins: extras_suggestions, langpacks, priorities, update-motd
+Resolving Dependencies
+--> Running transaction check
+---> Package tomcat-docs-webapp.noarch 0:7.0.76-9.amzn2 will be installed
+---> Package tomcat-javadoc.noarch 0:7.0.76-9.amzn2 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+================================================================================================================================================================================================
+ Package                                             Arch                                    Version                                          Repository                                   Size
+================================================================================================================================================================================================
+Installing:
+ tomcat-docs-webapp                                  noarch                                  7.0.76-9.amzn2                                   amzn2-core                                  718 k
+ tomcat-javadoc                                      noarch                                  7.0.76-9.amzn2                                   amzn2-core                                  2.5 M
+
+Transaction Summary
+================================================================================================================================================================================================
+Install  2 Packages
+
+Total download size: 3.3 M
+Installed size: 47 M
+Is this ok [y/d/N]: y
+Downloading packages:
+(1/2): tomcat-docs-webapp-7.0.76-9.amzn2.noarch.rpm                                                                                                                      | 718 kB  00:00:00
+(2/2): tomcat-javadoc-7.0.76-9.amzn2.noarch.rpm                                                                                                                          | 2.5 MB  00:00:00
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Total                                                                                                                                                            15 MB/s | 3.3 MB  00:00:00
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : tomcat-docs-webapp-7.0.76-9.amzn2.noarch                                                                                                                                     1/2
+  Installing : tomcat-javadoc-7.0.76-9.amzn2.noarch                                                                                                                                         2/2
+  Verifying  : tomcat-javadoc-7.0.76-9.amzn2.noarch                                                                                                                                         1/2
+  Verifying  : tomcat-docs-webapp-7.0.76-9.amzn2.noarch                                                                                                                                     2/2
+
+Installed:
+  tomcat-docs-webapp.noarch 0:7.0.76-9.amzn2                                                       tomcat-javadoc.noarch 0:7.0.76-9.amzn2
+
+Complete!
+[ec2-user@ip-172-31-29-147 target]$ sudo vi /usr/share/tomcat/conf/tomcat-users.xml
+[ec2-user@ip-172-31-29-147 target]$ sudo systemctl start tomcat
+[ec2-user@ip-172-31-29-147 target]$ sudo systemctl status tomcat
+● tomcat.service - Apache Tomcat Web Application Container
+   Loaded: loaded (/usr/lib/systemd/system/tomcat.service; disabled; vendor preset: disabled)
+   Active: active (running) since Tue 2020-01-28 20:32:26 UTC; 6s ago
+ Main PID: 3471 (java)
+   CGroup: /system.slice/tomcat.service
+           └─3471 /usr/lib/jvm/jre/bin/java -classpath /usr/share/tomcat/bin/bootstrap.jar:/usr/share/tomcat/bin/tomcat-juli.jar:/usr/share/java/commons-daemon.jar -Dcatalina.base=/usr/shar...
+
+Jan 28 20:32:31 ip-172-31-29-147.us-east-2.compute.internal server[3471]: Jan 28, 2020 8:32:31 PM org.apache.catalina.startup.TldConfig execute
+Jan 28 20:32:31 ip-172-31-29-147.us-east-2.compute.internal server[3471]: INFO: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger fo...ion time.
+Jan 28 20:32:31 ip-172-31-29-147.us-east-2.compute.internal server[3471]: Jan 28, 2020 8:32:31 PM org.apache.catalina.startup.HostConfig deployDirectory
+Jan 28 20:32:31 ip-172-31-29-147.us-east-2.compute.internal server[3471]: INFO: Deployment of web application directory /var/lib/tomcat/webapps/docs has finished in 335 ms
+Jan 28 20:32:31 ip-172-31-29-147.us-east-2.compute.internal server[3471]: Jan 28, 2020 8:32:31 PM org.apache.coyote.AbstractProtocol start
+Jan 28 20:32:31 ip-172-31-29-147.us-east-2.compute.internal server[3471]: INFO: Starting ProtocolHandler ["http-bio-8080"]
+Jan 28 20:32:31 ip-172-31-29-147.us-east-2.compute.internal server[3471]: Jan 28, 2020 8:32:31 PM org.apache.coyote.AbstractProtocol start
+Jan 28 20:32:31 ip-172-31-29-147.us-east-2.compute.internal server[3471]: INFO: Starting ProtocolHandler ["ajp-bio-8009"]
+Jan 28 20:32:31 ip-172-31-29-147.us-east-2.compute.internal server[3471]: Jan 28, 2020 8:32:31 PM org.apache.catalina.startup.Catalina start
+Jan 28 20:32:31 ip-172-31-29-147.us-east-2.compute.internal server[3471]: INFO: Server startup in 3430 ms
+Hint: Some lines were ellipsized, use -l to show in full.
+[ec2-user@ip-172-31-29-147 target]$
