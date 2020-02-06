@@ -1,0 +1,517 @@
+
+Priyanka@ManishPriya MINGW64 /usr/bin
+$ ssh ec2-user@18.188.128.88
+The authenticity of host '18.188.128.88 (18.188.128.88)' can't be established.
+ECDSA key fingerprint is SHA256:C2jeSkHORIzW6qNxRk4o13YhP+S+VOEirsmPltv6QWM.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added '18.188.128.88' (ECDSA) to the list of known hosts.
+Last login: Fri Jan 31 23:05:59 2020 from pool-72-93-214-32.bstnma.fios.verizon.net
+
+       __|  __|_  )
+       _|  (     /   Amazon Linux 2 AMI
+      ___|\___|___|
+
+https://aws.amazon.com/amazon-linux-2/
+[ec2-user@ip-172-31-20-86 ~]$
+[ec2-user@ip-172-31-20-86 ~]$ sudo docker run hello-world
+docker: Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+[ec2-user@ip-172-31-20-86 ~]$ sudo docker run hello-world
+docker: Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?.
+See 'docker run --help'.
+[ec2-user@ip-172-31-20-86 ~]$ sudo docker start
+"docker start" requires at least 1 argument.
+See 'docker start --help'.
+
+Usage:  docker start [OPTIONS] CONTAINER [CONTAINER...]
+
+Start one or more stopped containers
+[ec2-user@ip-172-31-20-86 ~]$
+[ec2-user@ip-172-31-20-86 ~]$ sudo service docker start
+Redirecting to /bin/systemctl start docker.service
+[ec2-user@ip-172-31-20-86 ~]$
+[ec2-user@ip-172-31-20-86 ~]$ sudo docker run hello-world
+
+Hello from Docker!
+This message shows that your installation appears to be working correctly.
+
+To generate this message, Docker took the following steps:
+ 1. The Docker client contacted the Docker daemon.
+ 2. The Docker daemon pulled the "hello-world" image from the Docker Hub.
+    (amd64)
+ 3. The Docker daemon created a new container from that image which runs the
+    executable that produces the output you are currently reading.
+ 4. The Docker daemon streamed that output to the Docker client, which sent it
+    to your terminal.
+
+To try something more ambitious, you can run an Ubuntu container with:
+ $ docker run -it ubuntu bash
+
+Share images, automate workflows, and more with a free Docker ID:
+ https://hub.docker.com/
+
+For more examples and ideas, visit:
+ https://docs.docker.com/get-started/
+
+[ec2-user@ip-172-31-20-86 ~]$
+[ec2-user@ip-172-31-20-86 ~]$ sudo docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+hello-world         latest              fce289e99eb9        13 months ago       1.84kB
+[ec2-user@ip-172-31-20-86 ~]$
+[ec2-user@ip-172-31-20-86 ~]$ sudo sysytemctl docker
+sudo: sysytemctl: command not found
+[ec2-user@ip-172-31-20-86 ~]$ sudo sysytemctl status docker
+sudo: sysytemctl: command not found
+[ec2-user@ip-172-31-20-86 ~]$
+[ec2-user@ip-172-31-20-86 ~]$ sudo systemctl status docker
+● docker.service - Docker Application Container Engine
+   Loaded: loaded (/usr/lib/systemd/system/docker.service; disabled; vendor preset: disabled)
+   Active: active (running) since Mon 2020-02-03 02:26:17 UTC; 1min 52s ago
+     Docs: https://docs.docker.com
+  Process: 3620 ExecStartPre=/usr/libexec/docker/docker-setup-runtimes.sh (code=exited, status=0/SUCCESS)
+  Process: 3609 ExecStartPre=/bin/mkdir -p /run/docker (code=exited, status=0/SUCCESS)
+ Main PID: 3628 (dockerd)
+    Tasks: 10
+   Memory: 83.6M
+   CGroup: /system.slice/docker.service
+[ec2-user@ip-172-31-20-86 ~]$ kerd -H fd:// --containerd=/run/containerd/containerd.sock --default-ulimit nofile=1024:409...
+[ec2-user@ip-172-31-20-86 ~]$
+[ec2-user@ip-172-31-20-86 ~]$ sudo vi /etc/sysconfig/docker
+[ec2-user@ip-172-31-20-86 ~]$
+[ec2-user@ip-172-31-20-86 ~]$ sudo systemctl start docker
+[ec2-user@ip-172-31-20-86 ~]$ sudo systemctl status docker
+● docker.service - Docker Application Container Engine
+   Loaded: loaded (/usr/lib/systemd/system/docker.service; disabled; vendor preset: disabled)
+   Active: active (running) since Mon 2020-02-03 02:26:17 UTC; 27min ago
+     Docs: https://docs.docker.com
+  Process: 3620 ExecStartPre=/usr/libexec/docker/docker-setup-runtimes.sh (code=exited, status=0/SUCCESS)
+  Process: 3609 ExecStartPre=/bin/mkdir -p /run/docker (code=exited, status=0/SUCCESS)
+ Main PID: 3628 (dockerd)
+    Tasks: 10
+   Memory: 82.3M
+   CGroup: /system.slice/docker.service
+           └─3628 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd...
+
+Feb 03 02:26:17 ip-172-31-20-86.us-east-2.compute.internal dockerd[3628]: time="202...
+Feb 03 02:26:17 ip-172-31-20-86.us-east-2.compute.internal dockerd[3628]: time="202...
+Feb 03 02:26:17 ip-172-31-20-86.us-east-2.compute.internal dockerd[3628]: time="202...
+Feb 03 02:26:17 ip-172-31-20-86.us-east-2.compute.internal dockerd[3628]: time="202...
+Feb 03 02:26:17 ip-172-31-20-86.us-east-2.compute.internal dockerd[3628]: time="202...
+Feb 03 02:26:17 ip-172-31-20-86.us-east-2.compute.internal dockerd[3628]: time="202...
+Feb 03 02:26:17 ip-172-31-20-86.us-east-2.compute.internal dockerd[3628]: time="202...
+Feb 03 02:26:17 ip-172-31-20-86.us-east-2.compute.internal systemd[1]: Started Dock...
+Feb 03 02:26:17 ip-172-31-20-86.us-east-2.compute.internal dockerd[3628]: time="202...
+Feb 03 02:26:24 ip-172-31-20-86.us-east-2.compute.internal dockerd[3628]: time="202...
+Hint: Some lines were ellipsized, use -l to show in full.
+[ec2-user@ip-172-31-20-86 ~]$
+[ec2-user@ip-172-31-20-86 ~]$ ps -ef | grep docker
+root      3628     1  0 02:26 ?        00:00:00 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock --default-ulimit nofile=1024:4096
+ec2-user  4335  3487  0 02:54 pts/0    00:00:00 grep --color=auto docker
+[ec2-user@ip-172-31-20-86 ~]$
+[ec2-user@ip-172-31-20-86 ~]$ sudo docker run hello-world
+
+Hello from Docker!
+This message shows that your installation appears to be working correctly.
+
+To generate this message, Docker took the following steps:
+ 1. The Docker client contacted the Docker daemon.
+ 2. The Docker daemon pulled the "hello-world" image from the Docker Hub.
+    (amd64)
+ 3. The Docker daemon created a new container from that image which runs the
+    executable that produces the output you are currently reading.
+ 4. The Docker daemon streamed that output to the Docker client, which sent it
+    to your terminal.
+
+To try something more ambitious, you can run an Ubuntu container with:
+ $ docker run -it ubuntu bash
+
+Share images, automate workflows, and more with a free Docker ID:
+ https://hub.docker.com/
+
+For more examples and ideas, visit:
+ https://docs.docker.com/get-started/
+
+[ec2-user@ip-172-31-20-86 ~]$
+[ec2-user@ip-172-31-20-86 ~]$ sudo docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+hello-world         latest              fce289e99eb9        13 months ago       1.84kB
+[ec2-user@ip-172-31-20-86 ~]$
+[ec2-user@ip-172-31-20-86 ~]$
+[ec2-user@ip-172-31-20-86 ~]$ sudo docker pull jenkins/slave
+Using default tag: latest
+latest: Pulling from jenkins/slave
+146bd6a88618: Pull complete
+9935d0c62ace: Pull complete
+db0efb86e806: Pull complete
+e705a4c4fd31: Pull complete
+3d3bf7f7e874: Pull complete
+49371c5b9ff6: Pull complete
+3f7eaaf7ad75: Pull complete
+3ce906ba3ddc: Pull complete
+b43b3e6f1168: Pull complete
+ea49c802f194: Pull complete
+811f745bd52f: Pull complete
+121093041b8d: Pull complete
+634102061176: Pull complete
+Digest: sha256:ff7417978f9429fcf6bec86dc6ff8fef66461800d6a9d44add849ef7018fb167
+Status: Downloaded newer image for jenkins/slave:latest
+[ec2-user@ip-172-31-20-86 ~]$
+[ec2-user@ip-172-31-20-86 ~]$
+[ec2-user@ip-172-31-20-86 ~]$
+[ec2-user@ip-172-31-20-86 ~]$ ps -ef | grep docker
+root      3628     1  0 02:26 ?        00:00:07 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock --default-ulimit nofile=1024:4096
+ec2-user  4701  3487  0 03:04 pts/0    00:00:00 grep --color=auto docker
+[ec2-user@ip-172-31-20-86 ~]$
+[ec2-user@ip-172-31-20-86 ~]$
+[ec2-user@ip-172-31-20-86 ~]$ sudo vi /etc/sysconfig/docker
+[ec2-user@ip-172-31-20-86 ~]$ sudo systemctl start docker
+[ec2-user@ip-172-31-20-86 ~]$ sudo systemctl status docker
+● docker.service - Docker Application Container Engine
+   Loaded: loaded (/usr/lib/systemd/system/docker.service; disabled; vendor preset: disabled)
+   Active: active (running) since Mon 2020-02-03 02:26:17 UTC; 43min ago
+     Docs: https://docs.docker.com
+  Process: 3620 ExecStartPre=/usr/libexec/docker/docker-setup-runtimes.sh (code=exited, status=0/SUCCESS)
+  Process: 3609 ExecStartPre=/bin/mkdir -p /run/docker (code=exited, status=0/SUCCESS)
+ Main PID: 3628 (dockerd)
+    Tasks: 11
+   Memory: 206.0M
+   CGroup: /system.slice/docker.service
+           └─3628 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock --default-ulimit nofile=1024:4096
+
+Feb 03 02:26:17 ip-172-31-20-86.us-east-2.compute.internal dockerd[3628]: time="2020-02-03T02:26:17.011012819Z" level=info msg="pickfirstBalancer: HandleSubConnStateChange: 0xc4206...dule=grpc
+Feb 03 02:26:17 ip-172-31-20-86.us-east-2.compute.internal dockerd[3628]: time="2020-02-03T02:26:17.012283334Z" level=info msg="Loading containers: start."
+Feb 03 02:26:17 ip-172-31-20-86.us-east-2.compute.internal dockerd[3628]: time="2020-02-03T02:26:17.252952586Z" level=info msg="Default bridge (docker0) is assigned with an IP addr... address"
+Feb 03 02:26:17 ip-172-31-20-86.us-east-2.compute.internal dockerd[3628]: time="2020-02-03T02:26:17.290082657Z" level=info msg="Loading containers: done."
+Feb 03 02:26:17 ip-172-31-20-86.us-east-2.compute.internal dockerd[3628]: time="2020-02-03T02:26:17.393287016Z" level=info msg="Docker daemon" commit=039a7df graphdriver(s)=overlay...8.09.9-ce
+Feb 03 02:26:17 ip-172-31-20-86.us-east-2.compute.internal dockerd[3628]: time="2020-02-03T02:26:17.393968321Z" level=info msg="Daemon has completed initialization"
+Feb 03 02:26:17 ip-172-31-20-86.us-east-2.compute.internal systemd[1]: Started Docker Application Container Engine.
+Feb 03 02:26:17 ip-172-31-20-86.us-east-2.compute.internal dockerd[3628]: time="2020-02-03T02:26:17.409727126Z" level=info msg="API listen on /var/run/docker.sock"
+Feb 03 02:26:24 ip-172-31-20-86.us-east-2.compute.internal dockerd[3628]: time="2020-02-03T02:26:24.247995470Z" level=info msg="ignoring event" module=libcontainerd namespace=moby ...skDelete"
+Feb 03 02:54:22 ip-172-31-20-86.us-east-2.compute.internal dockerd[3628]: time="2020-02-03T02:54:22.077759959Z" level=info msg="ignoring event" module=libcontainerd namespace=moby ...skDelete"
+Hint: Some lines were ellipsized, use -l to show in full.
+[ec2-user@ip-172-31-20-86 ~]$ ps -ef | grep docker
+root      3628     1  0 02:26 ?        00:00:07 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock --default-ulimit nofile=1024:4096
+ec2-user  4725  3487  0 03:10 pts/0    00:00:00 grep --color=auto docker
+[ec2-user@ip-172-31-20-86 ~]$
+[ec2-user@ip-172-31-20-86 ~]$ sudo systemctl stop docker
+[ec2-user@ip-172-31-20-86 ~]$ sudo vi /etc/sysconfig/docker
+[ec2-user@ip-172-31-20-86 ~]$
+[ec2-user@ip-172-31-20-86 ~]$ sudo systemctl start docker
+[ec2-user@ip-172-31-20-86 ~]$ sudo systemctl status docker
+● docker.service - Docker Application Container Engine
+   Loaded: loaded (/usr/lib/systemd/system/docker.service; disabled; vendor preset: disabled)
+   Active: active (running) since Mon 2020-02-03 03:12:02 UTC; 5s ago
+     Docs: https://docs.docker.com
+  Process: 4790 ExecStartPre=/usr/libexec/docker/docker-setup-runtimes.sh (code=exited, status=0/SUCCESS)
+  Process: 4775 ExecStartPre=/bin/mkdir -p /run/docker (code=exited, status=0/SUCCESS)
+ Main PID: 4799 (dockerd)
+    Tasks: 8
+   Memory: 39.1M
+   CGroup: /system.slice/docker.service
+           └─4799 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock -H tcp://172.31.20.86:2376 -H unix:///var/run/docker.sock
+
+Feb 03 03:12:01 ip-172-31-20-86.us-east-2.compute.internal dockerd[4799]: time="2020-02-03T03:12:01.982033376Z" level=info msg="pickfirstBalancer: HandleSubConnStateChange: 0xc4200...dule=grpc
+Feb 03 03:12:01 ip-172-31-20-86.us-east-2.compute.internal dockerd[4799]: time="2020-02-03T03:12:01.982834207Z" level=info msg="pickfirstBalancer: HandleSubConnStateChange: 0xc4200...dule=grpc
+Feb 03 03:12:02 ip-172-31-20-86.us-east-2.compute.internal dockerd[4799]: time="2020-02-03T03:12:02.100979696Z" level=info msg="Default bridge (docker0) is assigned with an IP addr... address"
+Feb 03 03:12:02 ip-172-31-20-86.us-east-2.compute.internal dockerd[4799]: time="2020-02-03T03:12:02.152506999Z" level=info msg="Loading containers: done."
+Feb 03 03:12:02 ip-172-31-20-86.us-east-2.compute.internal dockerd[4799]: time="2020-02-03T03:12:02.252993172Z" level=info msg="Docker daemon" commit=039a7df graphdriver(s)=overlay...8.09.9-ce
+Feb 03 03:12:02 ip-172-31-20-86.us-east-2.compute.internal dockerd[4799]: time="2020-02-03T03:12:02.253684080Z" level=info msg="Daemon has completed initialization"
+Feb 03 03:12:02 ip-172-31-20-86.us-east-2.compute.internal systemd[1]: Started Docker Application Container Engine.
+Feb 03 03:12:02 ip-172-31-20-86.us-east-2.compute.internal dockerd[4799]: time="2020-02-03T03:12:02.282718510Z" level=info msg="API listen on /var/run/docker.sock"
+Feb 03 03:12:02 ip-172-31-20-86.us-east-2.compute.internal dockerd[4799]: time="2020-02-03T03:12:02.283113557Z" level=info msg="API listen on /var/run/docker.sock"
+Feb 03 03:12:02 ip-172-31-20-86.us-east-2.compute.internal dockerd[4799]: time="2020-02-03T03:12:02.283454593Z" level=info msg="API listen on 172.31.20.86:2376"
+Hint: Some lines were ellipsized, use -l to show in full.
+[ec2-user@ip-172-31-20-86 ~]$ sudo systemctl status docker
+● docker.service - Docker Application Container Engine
+   Loaded: loaded (/usr/lib/systemd/system/docker.service; disabled; vendor preset: disabled)
+   Active: active (running) since Mon 2020-02-03 03:12:02 UTC; 8s ago
+     Docs: https://docs.docker.com
+  Process: 4790 ExecStartPre=/usr/libexec/docker/docker-setup-runtimes.sh (code=exited, status=0/SUCCESS)
+  Process: 4775 ExecStartPre=/bin/mkdir -p /run/docker (code=exited, status=0/SUCCESS)
+ Main PID: 4799 (dockerd)
+    Tasks: 8
+   Memory: 39.1M
+   CGroup: /system.slice/docker.service
+           └─4799 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock -H tcp://172.31.20.86:2376 -H unix:///var/run/docker.sock
+
+Feb 03 03:12:01 ip-172-31-20-86.us-east-2.compute.internal dockerd[4799]: time="2020-02-03T03:12:01.982033376Z" level=info msg="pickfirstBalancer: HandleSubConnStateChange: 0xc4200...dule=grpc
+Feb 03 03:12:01 ip-172-31-20-86.us-east-2.compute.internal dockerd[4799]: time="2020-02-03T03:12:01.982834207Z" level=info msg="pickfirstBalancer: HandleSubConnStateChange: 0xc4200...dule=grpc
+Feb 03 03:12:02 ip-172-31-20-86.us-east-2.compute.internal dockerd[4799]: time="2020-02-03T03:12:02.100979696Z" level=info msg="Default bridge (docker0) is assigned with an IP addr... address"
+Feb 03 03:12:02 ip-172-31-20-86.us-east-2.compute.internal dockerd[4799]: time="2020-02-03T03:12:02.152506999Z" level=info msg="Loading containers: done."
+Feb 03 03:12:02 ip-172-31-20-86.us-east-2.compute.internal dockerd[4799]: time="2020-02-03T03:12:02.252993172Z" level=info msg="Docker daemon" commit=039a7df graphdriver(s)=overlay...8.09.9-ce
+Feb 03 03:12:02 ip-172-31-20-86.us-east-2.compute.internal dockerd[4799]: time="2020-02-03T03:12:02.253684080Z" level=info msg="Daemon has completed initialization"
+Feb 03 03:12:02 ip-172-31-20-86.us-east-2.compute.internal systemd[1]: Started Docker Application Container Engine.
+Feb 03 03:12:02 ip-172-31-20-86.us-east-2.compute.internal dockerd[4799]: time="2020-02-03T03:12:02.282718510Z" level=info msg="API listen on /var/run/docker.sock"
+Feb 03 03:12:02 ip-172-31-20-86.us-east-2.compute.internal dockerd[4799]: time="2020-02-03T03:12:02.283113557Z" level=info msg="API listen on /var/run/docker.sock"
+Feb 03 03:12:02 ip-172-31-20-86.us-east-2.compute.internal dockerd[4799]: time="2020-02-03T03:12:02.283454593Z" level=info msg="API listen on 172.31.20.86:2376"
+Hint: Some lines were ellipsized, use -l to show in full.
+[ec2-user@ip-172-31-20-86 ~]$ ps -ef | grep docker
+root      4799     1  0 03:12 ?        00:00:00 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock -H tcp://172.31.20.86:2376 -H unix:///var/run/docker.sock
+ec2-user  4939  3487  0 03:12 pts/0    00:00:00 grep --color=auto docker
+[ec2-user@ip-172-31-20-86 ~]$
+[ec2-user@ip-172-31-20-86 ~]$
+[ec2-user@ip-172-31-20-86 ~]$ cd /etc/
+[ec2-user@ip-172-31-20-86 etc]$ ll
+total 1120
+drwxr-xr-x  4 root root       35 Dec 17 22:20 acpi
+-rw-r--r--  1 root root       16 Dec 17 22:21 adjtime
+-rw-r--r--  1 root root     1518 Jun  7  2013 aliases
+-rw-r--r--  1 root root    12288 Jan 28 14:50 aliases.db
+drwxr-xr-x  2 root root     4096 Jan 28 15:04 alternatives
+drwxr-xr-x  3 root root       17 Dec 17 22:21 amazon
+-rw-------  1 root root      541 Jul 28  2018 anacrontab
+-rw-r--r--  1 root root       55 Jul 27  2018 asound.conf
+-rw-r--r--  1 root root        1 Jul 27  2018 at.deny
+drwxr-x---  3 root root       43 Dec 17 22:21 audisp
+drwxr-x---  3 root root       83 Jan 28 14:50 audit
+drwxr-xr-x  2 root root      112 Dec 17 22:21 bash_completion.d
+-rw-r--r--  1 root root     2853 Jan 23  2019 bashrc
+drwxr-xr-x  2 root root        6 Feb 15  2019 binfmt.d
+drwxr-xr-x  2 root root        6 Jul 31  2018 chkconfig.d
+-rw-r--r--  1 root root      939 Feb 21  2019 chrony.conf
+-rw-r-----  1 root chrony    481 Sep 15  2017 chrony.keys
+drwxr-xr-x  2 root root       26 Dec 17 22:21 cifs-utils
+drwxr-xr-x  4 root root       59 Dec 17 22:20 cloud
+drwxr-xr-x  2 root root       25 Jan 31 23:48 containerd
+drwxr-xr-x  2 root root       73 Dec 17 22:21 cron.d
+drwxr-xr-x  2 root root       57 Dec 17 22:21 cron.daily
+-rw-------  1 root root        0 Jul 28  2018 cron.deny
+drwxr-xr-x  2 root root       22 Oct 18  2017 cron.hourly
+drwxr-xr-x  2 root root        6 Oct 18  2017 cron.monthly
+-rw-r--r--  1 root root      451 Oct 18  2017 crontab
+drwxr-xr-x  2 root root        6 Oct 18  2017 cron.weekly
+-rw-r--r--  1 root root     1620 Jan 23  2019 csh.cshrc
+-rw-r--r--  1 root root      866 Jan 23  2019 csh.login
+drwxr-xr-x  4 root root       78 Dec 17 22:20 dbus-1
+drwxr-xr-x  2 root root       44 Dec 17 22:21 default
+drwxr-xr-x  2 root root        6 Nov  2  2018 depmod.d
+drwxr-x---  4 root root       74 Dec 17 22:21 dhcp
+-rw-r--r--  1 root root     5090 Jul 31  2018 DIR_COLORS
+-rw-r--r--  1 root root     5725 Jul 31  2018 DIR_COLORS.256color
+-rw-r--r--  1 root root     4669 Jul 31  2018 DIR_COLORS.lightbgcolor
+drwxr-xr-x  2 root root       22 Jan 31 23:55 docker
+drwxr-xr-x  2 root root        6 Nov  1 19:29 docker-runtimes.d
+-rw-r--r--  1 root root     1285 Aug 22 23:59 dracut.conf
+drwxr-xr-x  2 root root        6 Dec 17 22:21 dracut.conf.d
+-rw-r--r--  1 root root      112 Jul 26  2018 e2fsck.conf
+drwxr-xr-x  3 root root       37 Jan 28 15:04 egl
+-rw-r--r--  1 root root        0 Jan 23  2019 environment
+-rw-r--r--  1 root root        0 Jun  7  2013 exports
+drwxr-xr-x  2 root root        6 Aug 17  2018 exports.d
+-rw-r--r--  1 root root       70 Jan 23  2019 filesystems
+drwxr-xr-x  3 root root       38 Jan 28 15:04 fonts
+-rw-r--r--  1 root root       91 Dec 17 22:21 fstab
+drwxr-xr-x  2 root root        6 Jul 31  2018 gcrypt
+-rw-r--r--  1 root root      842 Jul 31  2018 GeoIP.conf
+-rw-r--r--  1 root root      858 Jul 31  2018 GeoIP.conf.default
+drwxr-xr-x  3 root root       26 Jan 28 15:04 glvnd
+drwxr-xr-x  2 root root        6 Apr 29  2019 gnupg
+-rw-r--r--  1 root root       94 Jul 31  2018 GREP_COLORS
+drwxr-xr-x  4 root root       40 Dec 17 22:20 groff
+-rw-r--r--  1 root root      696 Jan 31 23:48 group
+-rw-r--r--  1 root root      682 Jan 31 23:48 group-
+lrwxrwxrwx  1 root root       22 Dec 17 22:20 grub2.cfg -> ../boot/grub2/grub.cfg
+drwx------  2 root root      166 Dec 17 22:20 grub.d
+----------  1 root root      563 Jan 31 23:48 gshadow
+----------  1 root root      552 Jan 31 23:48 gshadow-
+drwxr-xr-x  3 root root       20 Dec 17 22:20 gss
+drwxr-xr-x  2 root root       79 Dec 17 22:20 gssproxy
+-rw-r--r--  1 root root     1591 Jun  8  2018 hibagent-config.cfg
+-rw-r--r--  1 root root      721 Jun 21  2019 hibinit-config.cfg
+-rw-r--r--  1 root root        9 Jun  7  2013 host.conf
+-rw-r--r--  1 root root       43 Jan 28 14:50 hostname
+-rw-r--r--  1 root root      126 Dec 17 22:21 hosts
+-rw-r--r--  1 root root      370 Jun  7  2013 hosts.allow
+-rw-r--r--  1 root root      460 Jun  7  2013 hosts.deny
+-rw-r--r--  1 root root     4849 Jul 27  2018 idmapd.conf
+-rw-r--r--  1 root root      269 Dec 17 22:21 image-id
+lrwxrwxrwx  1 root root       11 Dec 17 22:20 init.d -> rc.d/init.d
+-rw-r--r--  1 root root      511 Oct  2 00:25 inittab
+-rw-r--r--  1 root root      942 Jun  7  2013 inputrc
+drwxr-xr-x  2 root root      159 Dec 17 22:20 iproute2
+-rw-r--r--  1 root root       23 Nov  1 23:45 issue
+-rw-r--r--  1 root root       22 Nov  1 23:45 issue.net
+drwxr-xr-x  3 root root       62 Jan 28 15:04 java
+drwxr-xr-x  2 root root        6 Oct 19  2017 jvm
+drwxr-xr-x  2 root root        6 Oct 19  2017 jvm-commmon
+-rw-r--r--  1 root root      641 Dec  6 19:09 krb5.conf
+drwxr-xr-x  2 root root        6 Dec  6 19:13 krb5.conf.d
+-rw-r--r--  1 root root    30487 Jan 31 23:48 ld.so.cache
+-rw-r--r--  1 root root       28 Oct 10 17:46 ld.so.conf
+drwxr-xr-x  2 root root      140 Dec 17 22:20 ld.so.conf.d
+-rw-r-----  1 root root      191 Oct 12  2017 libaudit.conf
+drwxr-xr-x  2 root root       35 Dec 17 22:20 libnl
+-rw-r--r--  1 root root     2391 Oct 12  2013 libuser.conf
+-rw-r--r--  1 root root       92 Jan 28 14:50 locale.conf
+-rw-r--r--  1 root root      127 Dec 17 22:21 localtime
+-rw-r--r--  1 root root     2028 Aug  1  2018 login.defs
+-rw-r--r--  1 root root      662 Jul 31  2013 logrotate.conf
+drwxr-xr-x  2 root root       89 Jan 28 15:08 logrotate.d
+drwxr-xr-x  3 root root       43 Dec 17 22:20 lsm
+drwxr-xr-x  6 root root      100 Dec 17 22:20 lvm
+-r--r--r--  1 root root       33 Dec 17 22:20 machine-id
+-rw-r--r--  1 root root      111 Nov 22 22:33 magic
+-rw-r--r--  1 root root     5171 Apr 29  2019 man_db.conf
+drwxr-xr-x  2 root root        6 Oct 19  2017 maven
+-rw-r--r--  1 root root      936 Jul 26  2018 mke2fs.conf
+drwxr-xr-x  2 root root       44 Dec 17 22:20 modprobe.d
+drwxr-xr-x  2 root root       22 Dec 17 22:21 modules-load.d
+lrwxrwxrwx  1 root root       25 Dec 17 22:21 motd -> /var/lib/update-motd/motd
+lrwxrwxrwx  1 root root       19 Dec 17 22:20 mtab -> ../proc/self/mounts
+-rw-r--r--  1 root root      570 Aug 14 00:44 my.cnf
+drwxr-xr-x  2 root root       31 Dec 17 22:20 my.cnf.d
+-rw-r--r--  1 root root     9450 Aug 28  2018 nanorc
+-rw-r--r--  1 root root      767 Jul 26  2018 netconfig
+drwxr-xr-x  3 root root       26 Dec 17 22:20 NetworkManager
+-rw-r--r--  1 root root       58 Oct  2 00:25 networks
+-rw-r--r--  1 root root      967 Aug 17  2018 nfs.conf
+-rw-r--r--  1 root root     3390 Aug 17  2018 nfsmount.conf
+-rw-r--r--  1 root root     1713 Dec 17 22:20 nsswitch.conf
+-rw-r--r--  1 root root     1702 Oct 10 17:46 nsswitch.conf.bak
+drwxr-xr-x  3 root root       36 Dec 17 22:20 openldap
+drwxr-xr-x  2 root root        6 Apr  9  2019 opt
+-rw-r--r--  1 root root      212 Nov  1 23:45 os-release
+drwxr-xr-x  2 root root     4096 Dec 17 22:21 pam.d
+-rw-r--r--  1 root root     1310 Jan 28 15:08 passwd
+-rw-r--r--  1 root root     1238 Jan 28 14:50 passwd-
+drwxr-xr-x  3 root root       21 Dec 17 22:20 pkcs11
+drwxr-xr-x 10 root root      116 Dec 17 22:20 pki
+drwxr-xr-x  2 root root       28 Dec 17 22:20 plymouth
+drwxr-xr-x  5 root root       52 Dec 17 22:20 pm
+drwxr-xr-x  2 root root        6 Aug  1  2018 popt.d
+drwxr-xr-x  2 root root      154 Dec 17 22:21 postfix
+drwxr-xr-x  3 root root      123 Dec 17 22:20 ppp
+drwxr-xr-x  2 root root       78 Dec 17 22:20 prelink.conf.d
+-rw-r--r--  1 root root      233 Jun  7  2013 printcap
+-rw-r--r--  1 root root     1819 Jan 23  2019 profile
+drwxr-xr-x  2 root root      306 Dec 17 22:21 profile.d
+-rw-r--r--  1 root root     6545 Jan 23  2019 protocols
+drwxr-xr-x  2 root root       35 Dec 17 22:20 python
+lrwxrwxrwx  1 root root       10 Dec 17 22:20 rc0.d -> rc.d/rc0.d
+lrwxrwxrwx  1 root root       10 Dec 17 22:20 rc1.d -> rc.d/rc1.d
+lrwxrwxrwx  1 root root       10 Dec 17 22:20 rc2.d -> rc.d/rc2.d
+lrwxrwxrwx  1 root root       10 Dec 17 22:20 rc3.d -> rc.d/rc3.d
+lrwxrwxrwx  1 root root       10 Dec 17 22:20 rc4.d -> rc.d/rc4.d
+lrwxrwxrwx  1 root root       10 Dec 17 22:20 rc5.d -> rc.d/rc5.d
+lrwxrwxrwx  1 root root       10 Dec 17 22:20 rc6.d -> rc.d/rc6.d
+drwxr-xr-x 10 root root      127 Dec 17 22:20 rc.d
+lrwxrwxrwx  1 root root       13 Dec 17 22:20 rc.local -> rc.d/rc.local
+-rw-r--r--  1 root root     1787 Jul 26  2018 request-key.conf
+drwxr-xr-x  2 root root       30 Dec 17 22:20 request-key.d
+-rw-r--r--  1 root root      126 Feb  3 02:10 resolv.conf
+-rw-r--r--  1 root root     1634 Nov 27  2018 rpc
+drwxr-xr-x  2 root root      130 Jan 28 15:04 rpm
+-rw-r--r--  1 root root      458 Jul 27  2018 rsyncd.conf
+-rw-r--r--  1 root root     3232 Nov 14 22:39 rsyslog.conf
+drwxr-xr-x  2 root root       50 Dec 17 22:20 rsyslog.d
+-rw-r--r--  1 root root      966 Oct  2 00:25 rwtab
+drwxr-xr-x  2 root root       23 Oct  2 00:25 rwtab.d
+drwxr-xr-x  2 root root       24 Dec 17 22:21 sasl2
+drwxr-xr-x  3 root root       34 Dec 17 22:21 scl
+-rw-r--r--  1 root root     6722 Jul 27  2018 screenrc
+-rw-------  1 root root      221 Jan 23  2019 securetty
+drwxr-xr-x  6 root root     4096 Dec 17 22:20 security
+drwxr-xr-x  4 root root       68 Dec 17 22:21 selinux
+-rw-r--r--  1 root root   670293 Jun  7  2013 services
+-rw-r--r--  1 root root      216 Jul 31  2018 sestatus.conf
+drwxr-xr-x  2 root root     4096 Dec 17 22:20 setuptool.d
+----------  1 root root      677 Jan 28 15:08 shadow
+----------  1 root root      654 Jan 28 14:50 shadow-
+-rw-r--r--  1 root root       63 Dec 17 22:21 shells
+drwxr-xr-x  2 root root       62 Dec 17 22:20 skel
+drwxr-xr-x  2 root root      225 Jan 28 14:50 ssh
+drwxr-xr-x  2 root root       19 Dec 17 22:20 ssl
+-rw-r--r--  1 root root      212 Oct  2 00:25 statetab
+drwxr-xr-x  2 root root        6 Oct  2 00:25 statetab.d
+-rw-r--r--  1 root root        0 Jan 23  2019 subgid
+-rw-r--r--  1 root root        0 Jan 23  2019 subuid
+-rw-r-----  1 root root     1786 Oct 11 21:36 sudo.conf
+-r--r-----  1 root root     4328 Oct 11 21:36 sudoers
+drwxr-x---  2 root root       33 Jan 28 14:50 sudoers.d
+-rw-r-----  1 root root     3181 Oct 11 21:36 sudo-ldap.conf
+drwxr-xr-x  5 root root     4096 Feb  3 03:11 sysconfig
+-rw-r--r--  1 root root      449 Oct  2 00:25 sysctl.conf
+drwxr-xr-x  2 root root       74 Dec 17 22:21 sysctl.d
+drwxr-xr-x  4 root root      151 Dec 17 22:20 systemd
+-rw-r--r--  1 root root       31 Nov  1 23:45 system-release
+-rw-r--r--  1 root root       32 Nov  1 23:45 system-release-cpe
+drwxr-xr-x  2 root root        6 Sep 19 01:55 terminfo
+drwxr-xr-x  2 root root        6 Feb 15  2019 tmpfiles.d
+-rw-r--r--  1 root root      750 Sep 11 20:07 trusted-key.key
+drwxr-xr-x  3 root root       54 Jan 28 14:50 udev
+-rw-r--r--  1 root root      557 Jul 27  2018 updatedb.conf
+drwxr-xr-x  2 root root       86 Oct 16  2018 update-motd.d
+-rw-r--r--  1 root root     1982 Jul 17  2019 vimrc
+-rw-r--r--  1 root root     1204 Jul 17  2019 virc
+-rw-r--r--  1 root root     4479 Jun  8  2019 wgetrc
+drwxr-xr-x  5 root root       57 Dec 17 22:20 X11
+drwxr-xr-x  4 root root       38 Dec 17 22:20 xdg
+drwxr-xr-x  2 root root        6 Apr  9  2019 xinetd.d
+drwxr-xr-x  6 root root      100 Dec 17 22:20 yum
+-rw-r--r--  1 root root      862 Nov 10 16:39 yum.conf
+drwxr-xr-x  2 root root       74 Jan 28 15:07 yum.repos.d
+[ec2-user@ip-172-31-20-86 etc]$ cd sysconfig/
+[ec2-user@ip-172-31-20-86 sysconfig]$ ll
+total 124
+-rw-r--r-- 1 root root    9 Nov  6  2018 acpid
+-rw-r--r-- 1 root root  403 Jul 27  2018 atd
+-rw-r--r-- 1 root root    0 Jul 31  2018 authconfig
+-rw-r--r-- 1 root root   46 Feb 21  2019 chronyd
+-rw-r--r-- 1 root root   20 Dec 17 22:21 clock
+drwxr-xr-x 2 root root    6 Oct  2 00:25 console
+-rw-r--r-- 1 root root  150 Nov 16 22:03 cpupower
+-rw------- 1 root root  110 Jul 28  2018 crond
+-rw-r--r-- 1 root root  604 Feb  3 03:11 docker
+-rw-r--r-- 1 root root  589 Nov  1 19:25 docker-storage
+lrwxrwxrwx 1 root root   17 Dec 17 22:20 grub -> /etc/default/grub
+-rw-r--r-- 1 root root   19 Dec 17 22:21 i18n
+-rw-r--r-- 1 root root  798 Oct  2 00:25 init
+-rw------- 1 root root 2393 Jul 27  2018 ip6tables-config
+-rw------- 1 root root 2374 Jul 27  2018 iptables-config
+-rw-r--r-- 1 root root  923 Oct 31  2018 irqbalance
+-rw------- 1 root root 3937 Dec 19 12:44 jenkins
+-rw-r--r-- 1 root root   32 Dec 17 22:21 keyboard
+-rw-r--r-- 1 root root  200 Apr 29  2019 man-db
+drwxr-xr-x 2 root root    6 Oct  2 00:25 modules
+-rw-r--r-- 1 root root  634 Oct  2 00:25 netconsole
+[ec2-user@ip-172-31-20-86 sysconfig]$ 21 network
+[ec2-user@ip-172-31-20-86 sysconfig]$
+[ec2-user@ip-172-31-20-86 sysconfig]$ vi docker
+[ec2-user@ip-172-31-20-86 sysconfig]$
+[ec2-user@ip-172-31-20-86 sysconfig]$ sudo vi docker
+[ec2-user@ip-172-31-20-86 sysconfig]$
+[ec2-user@ip-172-31-20-86 sysconfig]$ cd
+[ec2-user@ip-172-31-20-86 ~]$
+[ec2-user@ip-172-31-20-86 ~]$ sudo service docker start
+Redirecting to /bin/systemctl start docker.service
+[ec2-user@ip-172-31-20-86 ~]$ sudo systemctl status docker
+● docker.service - Docker Application Container Engine
+   Loaded: loaded (/usr/lib/systemd/system/docker.service; disabled; vendor preset: disabled)
+   Active: active (running) since Mon 2020-02-03 03:12:02 UTC; 7min ago
+     Docs: https://docs.docker.com
+  Process: 4790 ExecStartPre=/usr/libexec/docker/docker-setup-runtimes.sh (code=exited, status=0/SUCCESS)
+  Process: 4775 ExecStartPre=/bin/mkdir -p /run/docker (code=exited, status=0/SUCCESS)
+ Main PID: 4799 (dockerd)
+    Tasks: 8
+   Memory: 37.8M
+   CGroup: /system.slice/docker.service
+           └─4799 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd...
+
+Feb 03 03:12:01 ip-172-31-20-86.us-east-2.compute.internal dockerd[4799]: time="202...
+Feb 03 03:12:01 ip-172-31-20-86.us-east-2.compute.internal dockerd[4799]: time="202...
+Feb 03 03:12:02 ip-172-31-20-86.us-east-2.compute.internal dockerd[4799]: time="202...
+Feb 03 03:12:02 ip-172-31-20-86.us-east-2.compute.internal dockerd[4799]: time="202...
+Feb 03 03:12:02 ip-172-31-20-86.us-east-2.compute.internal dockerd[4799]: time="202...
+Feb 03 03:12:02 ip-172-31-20-86.us-east-2.compute.internal dockerd[4799]: time="202...
+Feb 03 03:12:02 ip-172-31-20-86.us-east-2.compute.internal systemd[1]: Started Dock...
+Feb 03 03:12:02 ip-172-31-20-86.us-east-2.compute.internal dockerd[4799]: time="202...
+Feb 03 03:12:02 ip-172-31-20-86.us-east-2.compute.internal dockerd[4799]: time="202...
+Feb 03 03:12:02 ip-172-31-20-86.us-east-2.compute.internal dockerd[4799]: time="202...
+Hint: Some lines were ellipsized, use -l to show in full.
+[ec2-user@ip-172-31-20-86 ~]$
+[ec2-user@ip-172-31-20-86 ~]$
+[ec2-user@ip-172-31-20-86 ~]$ ps -ef | grep docker
+root      4799     1  0 03:12 ?        00:00:00 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock -H tcp://172.31.20.86:2376 -H unix:///var/run/docker.sock
+ec2-user  5006  3487  0 03:20 pts/0    00:00:00 grep --color=auto docker
+[ec2-user@ip-172-31-20-86 ~]$
+[ec2-user@ip-172-31-20-86 ~]$ docker ps -a
