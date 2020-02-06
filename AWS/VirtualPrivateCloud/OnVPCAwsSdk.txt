@@ -1,0 +1,484 @@
+
+Priyanka@ManishPriya MINGW64 /usr/bin
+$ ssh ec2-user@0
+ssh: connect to host 0 port 22: Connection refused
+
+Priyanka@ManishPriya MINGW64 /usr/bin
+$ ssh ec2-user@18.222.20.46
+ssh: connect to host 18.222.20.46 port 22: Connection timed out
+
+Priyanka@ManishPriya MINGW64 /usr/bin
+$ ssh ec2-user@18.222.20.46
+The authenticity of host '18.222.20.46 (18.222.20.46)' can't be established.
+ECDSA key fingerprint is SHA256:x6z1x3T+btWVDicU5c1PHZsMW4GspiK9MFvviWrfJDw.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added '18.222.20.46' (ECDSA) to the list of known hosts.
+
+       __|  __|_  )
+       _|  (     /   Amazon Linux 2 AMI
+      ___|\___|___|
+
+https://aws.amazon.com/amazon-linux-2/
+3 package(s) needed for security, out of 24 available
+Run "sudo yum update" to apply all updates.
+[ec2-user@ip-10-0-0-13 ~]$
+[ec2-user@ip-10-0-0-13 ~]$ python
+Python 2.7.16 (default, Nov  9 2019, 00:53:10)
+[GCC 7.3.1 20180712 (Red Hat 7.3.1-6)] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+>>>
+KeyboardInterrupt
+>>>
+>>>
+KeyboardInterrupt
+>>>
+KeyboardInterrupt
+>>>
+KeyboardInterrupt
+>>> ^V
+  File "<stdin>", line 1
+
+    ^
+SyntaxError: invalid syntax
+>>>
+>>> .
+  File "<stdin>", line 1
+    .
+    ^
+SyntaxError: invalid syntax
+>>>
+>>>
+KeyboardInterrupt
+>>> quit
+Use quit() or Ctrl-D (i.e. EOF) to exit
+>>>
+[ec2-user@ip-10-0-0-13 ~]$ python
+Python 2.7.16 (default, Nov  9 2019, 00:53:10)
+[GCC 7.3.1 20180712 (Red Hat 7.3.1-6)] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+>>>
+[ec2-user@ip-10-0-0-13 ~]$ python -version
+Unknown option: -e
+usage: python [option] ... [-c cmd | -m mod | file | -] [arg] ...
+Try `python -h' for more information.
+[ec2-user@ip-10-0-0-13 ~]$
+[ec2-user@ip-10-0-0-13 ~]$ pip
+-bash: pip: command not found
+[ec2-user@ip-10-0-0-13 ~]$
+[ec2-user@ip-10-0-0-13 ~]$ sudo yum install python
+Loaded plugins: extras_suggestions, langpacks, priorities, update-motd
+amzn2-core                                               | 2.4 kB     00:00
+Resolving Dependencies
+--> Running transaction check
+---> Package python.x86_64 0:2.7.16-4.amzn2 will be updated
+--> Processing Dependency: python(x86-64) = 2.7.16-4.amzn2 for package: python-devel-2.7.16-4.amzn2.x86_64
+---> Package python.x86_64 0:2.7.16-5.amzn2 will be an update
+--> Processing Dependency: python-libs(x86-64) = 2.7.16-5.amzn2 for package: python-2.7.16-5.amzn2.x86_64
+--> Running transaction check
+---> Package python-devel.x86_64 0:2.7.16-4.amzn2 will be updated
+---> Package python-devel.x86_64 0:2.7.16-5.amzn2 will be an update
+---> Package python-libs.x86_64 0:2.7.16-4.amzn2 will be updated
+---> Package python-libs.x86_64 0:2.7.16-5.amzn2 will be an update
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+================================================================================
+ Package            Arch         Version                 Repository        Size
+================================================================================
+Updating:
+ python             x86_64       2.7.16-5.amzn2          amzn2-core        92 k
+Updating for dependencies:
+ python-devel       x86_64       2.7.16-5.amzn2          amzn2-core       403 k
+ python-libs        x86_64       2.7.16-5.amzn2          amzn2-core       7.4 M
+
+Transaction Summary
+================================================================================
+Upgrade  1 Package (+2 Dependent packages)
+
+Total download size: 7.9 M
+Is this ok [y/d/N]: y
+Downloading packages:
+Delta RPMs disabled because /usr/bin/applydeltarpm not installed.
+(1/3): python-2.7.16-5.amzn2.x86_64.rpm                    |  92 kB   00:00
+(2/3): python-devel-2.7.16-5.amzn2.x86_64.rpm              | 403 kB   00:00
+(3/3): python-libs-2.7.16-5.amzn2.x86_64.rpm               | 7.4 MB   00:00
+--------------------------------------------------------------------------------
+Total                                               29 MB/s | 7.9 MB  00:00
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Updating   : python-libs-2.7.16-5.amzn2.x86_64                            1/6
+  Updating   : python-2.7.16-5.amzn2.x86_64                                 2/6
+  Updating   : python-devel-2.7.16-5.amzn2.x86_64                           3/6
+  Cleanup    : python-devel-2.7.16-4.amzn2.x86_64                           4/6
+  Cleanup    : python-2.7.16-4.amzn2.x86_64                                 5/6
+  Cleanup    : python-libs-2.7.16-4.amzn2.x86_64                            6/6
+  Verifying  : python-libs-2.7.16-5.amzn2.x86_64                            1/6
+  Verifying  : python-2.7.16-5.amzn2.x86_64                                 2/6
+  Verifying  : python-devel-2.7.16-5.amzn2.x86_64                           3/6
+  Verifying  : python-libs-2.7.16-4.amzn2.x86_64                            4/6
+  Verifying  : python-2.7.16-4.amzn2.x86_64                                 5/6
+  Verifying  : python-devel-2.7.16-4.amzn2.x86_64                           6/6
+
+Updated:
+  python.x86_64 0:2.7.16-5.amzn2
+
+Dependency Updated:
+  python-devel.x86_64 0:2.7.16-5.amzn2    python-libs.x86_64 0:2.7.16-5.amzn2
+
+Complete!
+[ec2-user@ip-10-0-0-13 ~]$ sudo yum install python.pip
+Loaded plugins: extras_suggestions, langpacks, priorities, update-motd
+No package python.pip available.
+Error: Nothing to do
+[ec2-user@ip-10-0-0-13 ~]$ pip
+-bash: pip: command not found
+[ec2-user@ip-10-0-0-13 ~]$ sudo yum install python.pip
+Loaded plugins: extras_suggestions, langpacks, priorities, update-motd
+No package python.pip available.
+Error: Nothing to do
+[ec2-user@ip-10-0-0-13 ~]$
+[ec2-user@ip-10-0-0-13 ~]$
+[ec2-user@ip-10-0-0-13 ~]$
+[ec2-user@ip-10-0-0-13 ~]$ sudo yum install python.pip
+Loaded plugins: extras_suggestions, langpacks, priorities, update-motd
+No package python.pip available.
+Error: Nothing to do
+[ec2-user@ip-10-0-0-13 ~]$ pip
+-bash: pip: command not found
+[ec2-user@ip-10-0-0-13 ~]$
+[ec2-user@ip-10-0-0-13 ~]$ python --version
+Python 2.7.16
+[ec2-user@ip-10-0-0-13 ~]$
+[ec2-user@ip-10-0-0-13 ~]$ curl -O https://bootstrap.pypa.io/get-pip.py
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 1764k  100 1764k    0     0  9592k      0 --:--:-- --:--:-- --:--:-- 9592k
+[ec2-user@ip-10-0-0-13 ~]$
+[ec2-user@ip-10-0-0-13 ~]$
+[ec2-user@ip-10-0-0-13 ~]$
+[ec2-user@ip-10-0-0-13 ~]$ python3 get-pip.py --user
+-bash: python3: command not found
+[ec2-user@ip-10-0-0-13 ~]$ python get-pip.py --user
+DEPRECATION: Python 2.7 reached the end of its life on January 1st, 2020. Please upgrade your Python as Python 2.7 is no longer maintained. A future version of pip will drop support for Python 2.7. More details about Python 2 support in pip, can be found at https://pip.pypa.io/en/latest/development/release-process/#python-2-support
+Collecting pip
+  Downloading pip-20.0.2-py2.py3-none-any.whl (1.4 MB)
+     |████████████████████████████████| 1.4 MB 3.1 MB/s
+Collecting wheel
+  Downloading wheel-0.34.2-py2.py3-none-any.whl (26 kB)
+Installing collected packages: pip, wheel
+Successfully installed pip-20.0.2 wheel-0.34.2
+[ec2-user@ip-10-0-0-13 ~]$
+[ec2-user@ip-10-0-0-13 ~]$ sudo yum install python37
+Loaded plugins: extras_suggestions, langpacks, priorities, update-motd
+amzn2-core                                               | 2.4 kB     00:00
+Resolving Dependencies
+--> Running transaction check
+---> Package python3.x86_64 0:3.7.4-1.amzn2.0.4 will be installed
+--> Processing Dependency: python3-libs(x86-64) = 3.7.4-1.amzn2.0.4 for package: python3-3.7.4-1.amzn2.0.4.x86_64
+--> Processing Dependency: python3-setuptools for package: python3-3.7.4-1.amzn2.0.4.x86_64
+--> Processing Dependency: python3-pip for package: python3-3.7.4-1.amzn2.0.4.x86_64
+--> Processing Dependency: libpython3.7m.so.1.0()(64bit) for package: python3-3.7.4-1.amzn2.0.4.x86_64
+--> Running transaction check
+---> Package python3-libs.x86_64 0:3.7.4-1.amzn2.0.4 will be installed
+---> Package python3-pip.noarch 0:9.0.3-1.amzn2.0.1 will be installed
+---> Package python3-setuptools.noarch 0:38.4.0-3.amzn2.0.6 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+================================================================================
+ Package                Arch       Version                 Repository      Size
+================================================================================
+Installing:
+ python3                x86_64     3.7.4-1.amzn2.0.4       amzn2-core      71 k
+Installing for dependencies:
+ python3-libs           x86_64     3.7.4-1.amzn2.0.4       amzn2-core     9.0 M
+ python3-pip            noarch     9.0.3-1.amzn2.0.1       amzn2-core     1.9 M
+ python3-setuptools     noarch     38.4.0-3.amzn2.0.6      amzn2-core     617 k
+
+Transaction Summary
+================================================================================
+Install  1 Package (+3 Dependent packages)
+
+Total download size: 12 M
+Installed size: 50 M
+Is this ok [y/d/N]: y
+Downloading packages:
+(1/4): python3-3.7.4-1.amzn2.0.4.x86_64.rpm                |  71 kB   00:00
+(2/4): python3-pip-9.0.3-1.amzn2.0.1.noarch.rpm            | 1.9 MB   00:00
+(3/4): python3-setuptools-38.4.0-3.amzn2.0.6.noarch.rpm    | 617 kB   00:00
+(4/4): python3-libs-3.7.4-1.amzn2.0.4.x86_64.rpm           | 9.0 MB   00:00
+--------------------------------------------------------------------------------
+Total                                               30 MB/s |  12 MB  00:00
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : python3-3.7.4-1.amzn2.0.4.x86_64                             1/4
+  Installing : python3-setuptools-38.4.0-3.amzn2.0.6.noarch                 2/4
+  Installing : python3-pip-9.0.3-1.amzn2.0.1.noarch                         3/4
+  Installing : python3-libs-3.7.4-1.amzn2.0.4.x86_64                        4/4
+  Verifying  : python3-setuptools-38.4.0-3.amzn2.0.6.noarch                 1/4
+  Verifying  : python3-3.7.4-1.amzn2.0.4.x86_64                             2/4
+  Verifying  : python3-libs-3.7.4-1.amzn2.0.4.x86_64                        3/4
+  Verifying  : python3-pip-9.0.3-1.amzn2.0.1.noarch                         4/4
+
+Installed:
+  python3.x86_64 0:3.7.4-1.amzn2.0.4
+
+Dependency Installed:
+  python3-libs.x86_64 0:3.7.4-1.amzn2.0.4
+  python3-pip.noarch 0:9.0.3-1.amzn2.0.1
+  python3-setuptools.noarch 0:38.4.0-3.amzn2.0.6
+
+Complete!
+[ec2-user@ip-10-0-0-13 ~]$ python3 --version
+Python 3.7.4
+[ec2-user@ip-10-0-0-13 ~]$
+[ec2-user@ip-10-0-0-13 ~]$
+[ec2-user@ip-10-0-0-13 ~]$ curl -O https://bootstrap.pypa.io/get-pip.py
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 1764k  100 1764k    0     0  9751k      0 --:--:-- --:--:-- --:--:-- 9751k
+[ec2-user@ip-10-0-0-13 ~]$
+[ec2-user@ip-10-0-0-13 ~]$
+[ec2-user@ip-10-0-0-13 ~]$
+[ec2-user@ip-10-0-0-13 ~]$ python3 get-pip.py --user
+Collecting pip
+  Using cached pip-20.0.2-py2.py3-none-any.whl (1.4 MB)
+Collecting wheel
+  Using cached wheel-0.34.2-py2.py3-none-any.whl (26 kB)
+Installing collected packages: pip, wheel
+Successfully installed pip-20.0.2 wheel-0.34.2
+[ec2-user@ip-10-0-0-13 ~]$
+[ec2-user@ip-10-0-0-13 ~]$ pip --version
+pip 20.0.2 from /home/ec2-user/.local/lib/python3.7/site-packages/pip (python 3.7)
+[ec2-user@ip-10-0-0-13 ~]$
+[ec2-user@ip-10-0-0-13 ~]$
+[ec2-user@ip-10-0-0-13 ~]$ sudo -i
+[root@ip-10-0-0-13 ~]#
+[root@ip-10-0-0-13 ~]# pip install aws
+-bash: pip: command not found
+[root@ip-10-0-0-13 ~]# pip
+-bash: pip: command not found
+[root@ip-10-0-0-13 ~]# sudo pip install aws
+sudo: pip: command not found
+[root@ip-10-0-0-13 ~]# exit
+logout
+[ec2-user@ip-10-0-0-13 ~]$ sudo pip install aws
+sudo: pip: command not found
+[ec2-user@ip-10-0-0-13 ~]$
+[ec2-user@ip-10-0-0-13 ~]$
+[ec2-user@ip-10-0-0-13 ~]$ pip
+
+Usage:
+  pip <command> [options]
+
+Commands:
+  install                     Install packages.
+  download                    Download packages.
+  uninstall                   Uninstall packages.
+  freeze                      Output installed packages in requirements format.
+  list                        List installed packages.
+  show                        Show information about installed packages.
+  check                       Verify installed packages have compatible dependencies.
+  config                      Manage local and global configuration.
+  search                      Search PyPI for packages.
+  wheel                       Build wheels from your requirements.
+  hash                        Compute hashes of package archives.
+  completion                  A helper command used for command completion.
+  debug                       Show information useful for debugging.
+  help                        Show help for commands.
+
+General Options:
+  -h, --help                  Show help.
+  --isolated                  Run pip in an isolated mode, ignoring
+                              environment variables and user configuration.
+  -v, --verbose               Give more output. Option is additive, and can be
+                              used up to 3 times.
+  -V, --version               Show version and exit.
+  -q, --quiet                 Give less output. Option is additive, and can be
+                              used up to 3 times (corresponding to WARNING,
+                              ERROR, and CRITICAL logging levels).
+  --log <path>                Path to a verbose appending log.
+  --proxy <proxy>             Specify a proxy in the form
+                              [user:passwd@]proxy.server:port.
+  --retries <retries>         Maximum number of retries each connection should
+                              attempt (default 5 times).
+  --timeout <sec>             Set the socket timeout (default 15 seconds).
+  --exists-action <action>    Default action when a path already exists:
+                              (s)witch, (i)gnore, (w)ipe, (b)ackup, (a)bort.
+  --trusted-host <hostname>   Mark this host or host:port pair as trusted,
+                              even though it does not have valid or any HTTPS.
+  --cert <path>               Path to alternate CA bundle.
+  --client-cert <path>        Path to SSL client certificate, a single file
+                              containing the private key and the certificate
+                              in PEM format.
+  --cache-dir <dir>           Store the cache data in <dir>.
+  --no-cache-dir              Disable the cache.
+  --disable-pip-version-check
+                              Don't periodically check PyPI to determine
+                              whether a new version of pip is available for
+                              download. Implied with --no-index.
+  --no-color                  Suppress colored output
+  --no-python-version-warning
+                              Silence deprecation warnings for upcoming
+                              unsupported Pythons.
+[ec2-user@ip-10-0-0-13 ~]$ pip --version
+pip 20.0.2 from /home/ec2-user/.local/lib/python3.7/site-packages/pip (python 3.7)
+[ec2-user@ip-10-0-0-13 ~]$
+[ec2-user@ip-10-0-0-13 ~]$ pip3
+WARNING: pip is being invoked by an old script wrapper. This will fail in a future version of pip.
+Please see https://github.com/pypa/pip/issues/5599 for advice on fixing the underlying issue.
+To avoid this problem you can invoke Python with '-m pip' instead of running pip directly.
+
+Usage:
+  pip3 <command> [options]
+
+Commands:
+  install                     Install packages.
+  download                    Download packages.
+  uninstall                   Uninstall packages.
+  freeze                      Output installed packages in requirements format.
+  list                        List installed packages.
+  show                        Show information about installed packages.
+  check                       Verify installed packages have compatible dependencies.
+  config                      Manage local and global configuration.
+  search                      Search PyPI for packages.
+  wheel                       Build wheels from your requirements.
+  hash                        Compute hashes of package archives.
+  completion                  A helper command used for command completion.
+  debug                       Show information useful for debugging.
+  help                        Show help for commands.
+
+General Options:
+  -h, --help                  Show help.
+  --isolated                  Run pip in an isolated mode, ignoring
+                              environment variables and user configuration.
+  -v, --verbose               Give more output. Option is additive, and can be
+                              used up to 3 times.
+  -V, --version               Show version and exit.
+  -q, --quiet                 Give less output. Option is additive, and can be
+                              used up to 3 times (corresponding to WARNING,
+                              ERROR, and CRITICAL logging levels).
+  --log <path>                Path to a verbose appending log.
+  --proxy <proxy>             Specify a proxy in the form
+                              [user:passwd@]proxy.server:port.
+  --retries <retries>         Maximum number of retries each connection should
+                              attempt (default 5 times).
+  --timeout <sec>             Set the socket timeout (default 15 seconds).
+  --exists-action <action>    Default action when a path already exists:
+                              (s)witch, (i)gnore, (w)ipe, (b)ackup, (a)bort.
+  --trusted-host <hostname>   Mark this host or host:port pair as trusted,
+                              even though it does not have valid or any HTTPS.
+  --cert <path>               Path to alternate CA bundle.
+  --client-cert <path>        Path to SSL client certificate, a single file
+                              containing the private key and the certificate
+                              in PEM format.
+  --cache-dir <dir>           Store the cache data in <dir>.
+  --no-cache-dir              Disable the cache.
+  --disable-pip-version-check
+                              Don't periodically check PyPI to determine
+                              whether a new version of pip is available for
+                              download. Implied with --no-index.
+  --no-color                  Suppress colored output
+  --no-python-version-warning
+                              Silence deprecation warnings for upcoming
+                              unsupported Pythons.
+[ec2-user@ip-10-0-0-13 ~]$
+[ec2-user@ip-10-0-0-13 ~]$ pip3 install awscli
+WARNING: pip is being invoked by an old script wrapper. This will fail in a future version of pip.
+Please see https://github.com/pypa/pip/issues/5599 for advice on fixing the underlying issue.
+To avoid this problem you can invoke Python with '-m pip' instead of running pip directly.
+Defaulting to user installation because normal site-packages is not writeable
+Collecting awscli
+  Downloading awscli-1.17.11-py2.py3-none-any.whl (2.9 MB)
+     |████████████████████████████████| 2.9 MB 2.9 MB/s
+Collecting PyYAML<5.3,>=3.10
+  Downloading PyYAML-5.2.tar.gz (265 kB)
+     |████████████████████████████████| 265 kB 35.5 MB/s
+Collecting colorama<0.4.2,>=0.2.5
+  Downloading colorama-0.4.1-py2.py3-none-any.whl (15 kB)
+Collecting docutils<0.16,>=0.10
+  Downloading docutils-0.15.2-py3-none-any.whl (547 kB)
+     |████████████████████████████████| 547 kB 31.0 MB/s
+Collecting botocore==1.14.11
+  Downloading botocore-1.14.11-py2.py3-none-any.whl (5.9 MB)
+     |████████████████████████████████| 5.9 MB 36.4 MB/s
+Collecting s3transfer<0.4.0,>=0.3.0
+  Downloading s3transfer-0.3.2-py2.py3-none-any.whl (69 kB)
+     |████████████████████████████████| 69 kB 13.0 MB/s
+Collecting rsa<=3.5.0,>=3.1.2
+  Downloading rsa-3.4.2-py2.py3-none-any.whl (46 kB)
+     |████████████████████████████████| 46 kB 8.3 MB/s
+Collecting jmespath<1.0.0,>=0.7.1
+  Downloading jmespath-0.9.4-py2.py3-none-any.whl (24 kB)
+Collecting python-dateutil<3.0.0,>=2.1
+  Downloading python_dateutil-2.8.1-py2.py3-none-any.whl (227 kB)
+     |████████████████████████████████| 227 kB 30.6 MB/s
+Collecting urllib3<1.26,>=1.20
+  Downloading urllib3-1.25.8-py2.py3-none-any.whl (125 kB)
+     |████████████████████████████████| 125 kB 38.8 MB/s
+Collecting pyasn1>=0.1.3
+  Downloading pyasn1-0.4.8-py2.py3-none-any.whl (77 kB)
+     |████████████████████████████████| 77 kB 10.9 MB/s
+Collecting six>=1.5
+  Downloading six-1.14.0-py2.py3-none-any.whl (10 kB)
+Building wheels for collected packages: PyYAML
+  Building wheel for PyYAML (setup.py) ... done
+  Created wheel for PyYAML: filename=PyYAML-5.2-cp37-cp37m-linux_x86_64.whl size=44233 sha256=394b61ee2f6a3f4b9bd21b50d2048eb5a0c3ffa66beba061bce9b7f49b4156f2
+  Stored in directory: /home/ec2-user/.cache/pip/wheels/c5/67/65/80b02387630c3794fc9bab68ca0de3dd87d639d65936026527
+Successfully built PyYAML
+Installing collected packages: PyYAML, colorama, docutils, jmespath, six, python-dateutil, urllib3, botocore, s3transfer, pyasn1, rsa, awscli
+Successfully installed PyYAML-5.2 awscli-1.17.11 botocore-1.14.11 colorama-0.4.1 docutils-0.15.2 jmespath-0.9.4 pyasn1-0.4.8 python-dateutil-2.8.1 rsa-3.4.2 s3transfer-0.3.2 six-1.14.0 urllib3-1.25.8
+[ec2-user@ip-10-0-0-13 ~]$
+[ec2-user@ip-10-0-0-13 ~]$
+[ec2-user@ip-10-0-0-13 ~]$ aws
+usage: aws [options] <command> <subcommand> [<subcommand> ...] [parameters]
+To see help text, you can run:
+
+  aws help
+  aws <command> help
+  aws <command> <subcommand> help
+aws: error: too few arguments
+[ec2-user@ip-10-0-0-13 ~]$
+[ec2-user@ip-10-0-0-13 ~]$ aws configure
+AWS Access Key ID [None]: abc
+AWS Secret Access Key [None]: ^C
+[ec2-user@ip-10-0-0-13 ~]$ aws configure
+AWS Access Key ID [None]: abc
+AWS Secret Access Key [None]: xyz
+Default region name [None]: us-east-2
+Default output format [None]: table
+[ec2-user@ip-10-0-0-13 ~]$
+[ec2-user@ip-10-0-0-13 ~]$ aws iam get-user
+------------------------------------------------------------
+|                          GetUser                         |
++----------------------------------------------------------+
+||                          User                          ||
+|+------------+-------------------------------------------+|
+||  Arn       |  arn:aws:iam::549707336934:user/Ansible   ||
+||  CreateDate|  2020-02-05T21:46:39Z                     ||
+||  Path      |  /                                        ||
+||  UserId    |  AIDAX77I4JTTD54IGELTY                    ||
+||  UserName  |  Ansible                                  ||
+|+------------+-------------------------------------------+|
+[ec2-user@ip-10-0-0-13 ~]$
+[ec2-user@ip-10-0-0-13 ~]$ aws
+usage: aws [options] <command> <subcommand> [<subcommand> ...] [parameters]
+To see help text, you can run:
+
+  aws help
+  aws <command> help
+  aws <command> <subcommand> help
+aws: error: too few arguments
+[ec2-user@ip-10-0-0-13 ~]$ aws help
+[ec2-user@ip-10-0-0-13 ~]$
+[ec2-user@ip-10-0-0-13 ~]$
+[ec2-user@ip-10-0-0-13 ~]$
+[ec2-user@ip-10-0-0-13 ~]$
+[ec2-user@ip-10-0-0-13 ~]$ ^C
+[ec2-user@ip-10-0-0-13 ~]$
